@@ -817,10 +817,11 @@ select {
   Hero Section
 =====================*/
 .hero-bg{
-  background-image: url(../img/banner/1.jpg);
+  background-image: url(../img/all-img/lc3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+
 }
 .hero-section .silde-item{
   padding-top: 300px;
@@ -1084,6 +1085,7 @@ select {
   color: var(--mainColor);
 }
 .owl-item.active .content .sub-title {
+ 
   animation-duration: 1s;
   animation-fill-mode: both;
   animation-name: fadeInLeft;
