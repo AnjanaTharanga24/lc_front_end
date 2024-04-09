@@ -323,11 +323,14 @@ function Index() {
                       </li>
                     </ul>
                   </li>
+
+                  <Link to='register'>
                   <li className="nav-item">
                     <a href="contact.html" className="nav-link">
-                      Contact
+                      Register
                     </a>
                   </li>
+                  </Link>
                 </ul>
                 <div className="option-item">
                   <a href="contact.html" className="serarch-btn">
