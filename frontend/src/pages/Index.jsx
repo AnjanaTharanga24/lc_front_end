@@ -1,1171 +1,571 @@
-import React from 'react'
-import SideBar from '../component/SideBar'
-import SideBar2 from '../component/SideBar2'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
 function Index() {
   return (
     <div>
-     
       {/* Navbar Area Start */}
-  <div className="navbar-area" id="navbar">
-    <div className="navbar-top">
-      <div className="container">
-        <div className="main-max-width">
-          <div className="row align-items-center justify-content-between">
-            <div className="col-xl-7 col-lg-7 col-md-6">
-              <ul className="navbar-contact d-lg-flex align-items-lg-center list-unstyle">
-                <li>
-                  <a className="navbar-brand xs-none" href="index.html">
-                    <img
-                      className="logo-light"
-                      src="assets/img/logo/logo.svg"
-                      alt="logo"
-                    />
-                  </a>
-                </li>
-                <li>
-                  <i className="ri-map-pin-2-fill" />
-                  <span>Road 405 Huston. USA</span>
-                </li>
-                <li>
-                  <i className="ri-time-line" />
-                  Mon - Fri: 9am 7 Pm
-                </li>
-              </ul>
-            </div>
-            <div className="col-xl-5 col-lg-5 col-md-5">
-              <div className="navbar-right d-flex align-items-center justify-content-center justify-content-lg-end">
-                <span className="fs-16 fc-main">Follow Us:</span>
-                <div className="option-item">
-                  <ul className="social-profile list-unstyle position-relative">
+      <div className="navbar-area" id="navbar">
+        <div className="navbar-top">
+          <div className="container">
+            <div className="main-max-width " style={{ width: "1500px" }}>
+              <div className="row align-items-center justify-content-between">
+                <div className="col-xl-7 col-lg-7 col-md-6 ">
+                  <ul className="navbar-contact d-lg-flex align-items-lg-center list-unstyle ">
                     <li>
-                      <a href="https://www.fb.com" target="_blank">
-                        <i className="ri-facebook-fill" />
+                      <a className="navbar-brand xs-none" href="index.html">
+                        <img
+                          className="logo-light"
+                          src="assets/img/logo/ls.png"
+                          alt="logo"
+                          style={{ height: "60px" }}
+                        />
                       </a>
                     </li>
-                    <li>
-                      <a href="https://www.linkedin.com" target="_blank">
-                        <i className="ri-twitter-x-fill" />
-                      </a>
+                    <li className="" style={{}}>
+                      <i className="ri-map-pin-2-fill " />
+                      <span>Road 405 Huston. USA</span>
                     </li>
-                    <li>
-                      <a href="https://www.instagram.com" target="_blank">
-                        <i className="ri-instagram-line" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.twitter.com" target="_blank">
-                        <i className="ri-linkedin-fill" />
-                      </a>
+                    <li className="" style={{}}>
+                      <i className="ri-time-line" />
+                      Mon - Fri: 9am 7 Pm
                     </li>
                   </ul>
+                </div>
+                <div className="col-xl-5 col-lg-5 col-md-5">
+                  <div className="navbar-right d-flex align-items-center justify-content-center justify-content-lg-end">
+                    <span className="fs-16 fc-main">Follow Us:</span>
+                    <div className="option-item">
+                      <ul className="social-profile list-unstyle position-relative">
+                        <li>
+                          <a href="https://www.fb.com" target="_blank">
+                            <i className="ri-facebook-fill" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://www.linkedin.com" target="_blank">
+                            <i className="ri-twitter-x-fill" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://www.instagram.com" target="_blank">
+                            <i className="ri-instagram-line" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://www.twitter.com" target="_blank">
+                            <i className="ri-linkedin-fill" />
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div className="container">
+          <div className="main-max-width" style={{ width: "2000px" }}>
+            <nav className="navbar insocour-nav navbar-expand-lg">
+              <a className="navbar-brand lg-none" href="index.html">
+                <img
+                  className="logo-light"
+                  src="assets/img/logo/ls.png"
+                  alt="logo"
+                  style={{ height: "60px" }}
+                />
+              </a>
+              <div className="other-options d-flex flex-wrap justify-content-end align-items-center d-lg-none">
+                <div className="option-item d-flex">
+                  <a href="contact.html" className="serarch-btn">
+                    <i className="ri-user-3-line" />
+                  </a>
+                  <a href="cart.html" className="shop-btn">
+                    <i className="ri-shopping-cart-2-line" />
+                    <span className="cart-number">1</span>
+                  </a>
+                  <a
+                    className="navbar-toggler"
+                    data-bs-toggle="offcanvas"
+                    href="#navbarOffcanvas"
+                    role="button"
+                    aria-controls="navbarOffcanvas"
+                  >
+                    <span className="burger-menu">
+                      <span className="top-bar" />
+                      <span className="middle-bar" />
+                      <span className="bottom-bar" />
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div className="collapse navbar-collapse justify-content-between">
+                <ul className="navbar-nav ms-1">
+                  <li className="nav-item">
+                    <a
+                      href="javascript:void(0)"
+                      className="dropdown-toggle nav-link"
+                    >
+                      Home
+                    </a>
+                    <ul className="dropdown-menu list-unstyle">
+                      <li className="nav-item">
+                        <a href="index.html" className="nav-link">
+                          Home One
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a href="index-2.html" className="nav-link">
+                          Home Two
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a href="index-3.html" className="nav-link">
+                          Home Three
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li className="nav-item">
+                    <a href="about.html" className="nav-link">
+                      About
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a
+                      href="javascript:void(0)"
+                      className="dropdown-toggle nav-link"
+                    >
+                      Courses
+                    </a>
+                    <ul className="dropdown-menu list-unstyle">
+                      <li className="nav-item">
+                        <a href="courses.html" className="nav-link">
+                          Courses
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a href="courses-list.html" className="nav-link">
+                          Course List
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a href="courses-grid.html" className="nav-link">
+                          Courses Grid
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a href="course-details.html" className="nav-link">
+                          Course Details
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li className="nav-item">
+                    <a
+                      href="javascript:void(0)"
+                      className="dropdown-toggle nav-link"
+                    >
+                      Shop
+                    </a>
+                    <ul className="dropdown-menu list-unstyle">
+                      <li className="nav-item">
+                        <a href="shop.html" className="nav-link">
+                          Shop
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a href="shop-filtter.html" className="nav-link">
+                          Shop Sidebar
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a href="single-product.html" className="nav-link">
+                          Product Details
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a href="cart.html" className="nav-link">
+                          Cart
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a href="checkout.html" className="nav-link">
+                          Checkout
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a href="success.html" className="nav-link">
+                          Success
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li className="nav-item">
+                    <a
+                      href="javascript:void(0)"
+                      className="dropdown-toggle nav-link"
+                    >
+                      <span>Skills</span>
+                    </a>
+                    <ul className="dropdown-menu list-unstyle">
+                      <Link to="/listening">
+                        <li className="nav-item">
+                          <a className="nav-link">Listening</a>
+                        </li>
+                      </Link>
+
+                      <Link to="/reading">
+                        <li className="nav-item">
+                          <a className="nav-link">Reading</a>
+                        </li>
+                      </Link>
+
+                      <Link to="/writing">
+                        <li className="nav-item">
+                          <a href="blog-details.html" className="nav-link">
+                            Writing
+                          </a>
+                        </li>
+                      </Link>
+
+                      <Link to="/speaking">
+                        <li className="nav-item">
+                          <a href="blog-details.html" className="nav-link">
+                            Speaking
+                          </a>
+                        </li>
+                      </Link>
+                    </ul>
+                  </li>
+                  <li className="nav-item">
+                    <a
+                      href="javascript:void(0)"
+                      className="dropdown-toggle nav-link"
+                    >
+                      Pages
+                    </a>
+                    <ul className="dropdown-menu list-unstyle">
+                      <li className="nav-item">
+                        <a href="sign-in.html" className="nav-link">
+                          Sign in
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a href="sign-up.html" className="nav-link">
+                          Sign Up
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a
+                          href="javascript:void(0)"
+                          className="dropdown-toggle nav-link"
+                        >
+                          Instructor
+                        </a>
+                        <ul className="dropdown-menu list-unstyle">
+                          <li className="nav-item">
+                            <a href="instructor.html" className="nav-link">
+                              Instructor
+                            </a>
+                          </li>
+                          <li className="nav-item">
+                            <a href="instructor2.html" className="nav-link">
+                              Instructor Tow
+                            </a>
+                          </li>
+                          <li className="nav-item">
+                            <a
+                              href="instructor-sidebar.html"
+                              className="nav-link"
+                            >
+                              Instructor Sidebar
+                            </a>
+                          </li>
+                          <li className="nav-item">
+                            <a
+                              href="instructor-details.html"
+                              className="nav-link"
+                            >
+                              Instructor Details
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li className="nav-item">
+                        <a href="faq.html" className="nav-link">
+                          FAQ
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a
+                          href="javascript:void(0)"
+                          className="dropdown-toggle nav-link"
+                        >
+                          Error
+                        </a>
+                        <ul className="dropdown-menu list-unstyle">
+                          <li className="nav-item">
+                            <a href="error-404.html" className="nav-link">
+                              Error One
+                            </a>
+                          </li>
+                          <li className="nav-item">
+                            <a
+                              href="error-sidebar-404.html"
+                              className="nav-link"
+                            >
+                              Error Two
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <Link to='register'>
+                  <li className="nav-item">
+                    <a href="contact.html" className="nav-link">
+                      Register
+                    </a>
+                  </li>
+                  </Link>
+                </ul>
+                <div className="option-item">
+                  <a href="contact.html" className="serarch-btn">
+                    <i className="ri-user-3-line" />
+                  </a>
+                  <a href="cart.html" className="shop-btn">
+                    <i className="ri-shopping-cart-2-line" />
+                    <span className="cart-number">1</span>
+                  </a>
+                  <a href="contact.html" className="btn style-one box-shadow-1">
+                    Free Consulting
+                  </a>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
       </div>
-    </div>
-    <div className="container">
-      <div className="main-max-width">
-        <nav className="navbar insocour-nav navbar-expand-lg">
-          <a className="navbar-brand lg-none" href="index.html">
+
+      {/* Navbar Area End */}
+      {/* Responsive Navbar Start */}
+      <div
+        className="responsive-navbar offcanvas offcanvas-end border-0"
+        data-bs-backdrop="static"
+        tabIndex={-1}
+        id="navbarOffcanvas"
+      >
+        <div className="offcanvas-header">
+          <a href="index.html" className="logo d-inline-block">
             <img
               className="logo-light"
               src="assets/img/logo/logo.svg"
-              alt="logo"
+              alt="Image"
             />
           </a>
-          <div className="other-options d-flex flex-wrap justify-content-end align-items-center d-lg-none">
-            <div className="option-item d-flex">
-              <a href="contact.html" className="serarch-btn">
-                <i className="ri-user-3-line" />
-              </a>
-              <a href="cart.html" className="shop-btn">
-                <i className="ri-shopping-cart-2-line" />
-                <span className="cart-number">1</span>
-              </a>
-              <a
-                className="navbar-toggler"
-                data-bs-toggle="offcanvas"
-                href="#navbarOffcanvas"
-                role="button"
-                aria-controls="navbarOffcanvas"
-              >
-                <span className="burger-menu">
-                  <span className="top-bar" />
-                  <span className="middle-bar" />
-                  <span className="bottom-bar" />
-                </span>
-              </a>
-            </div>
-          </div>
-          <div className="collapse navbar-collapse justify-content-between">
-            <ul className="navbar-nav ms-1">
-              <li className="nav-item">
-                <a
-                  href="javascript:void(0)"
-                  className="dropdown-toggle nav-link"
-                >
-                  Home
-                </a>
-                <ul className="dropdown-menu list-unstyle">
-                  <li className="nav-item">
-                    <a href="index.html" className="nav-link">
-                      Home One
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a href="index-2.html" className="nav-link">
-                      Home Two
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a href="index-3.html" className="nav-link">
-                      Home Three
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li className="nav-item">
-                <a href="about.html" className="nav-link">
-                  About
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  href="javascript:void(0)"
-                  className="dropdown-toggle nav-link"
-                >
-                  Courses
-                </a>
-                <ul className="dropdown-menu list-unstyle">
-                  <li className="nav-item">
-                    <a href="courses.html" className="nav-link">
-                      Courses
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a href="courses-list.html" className="nav-link">
-                      Course List
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a href="courses-grid.html" className="nav-link">
-                      Courses Grid
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a href="course-details.html" className="nav-link">
-                      Course Details
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li className="nav-item">
-                <a
-                  href="javascript:void(0)"
-                  className="dropdown-toggle nav-link"
-                >
-                  Shop
-                </a>
-                <ul className="dropdown-menu list-unstyle">
-                  <li className="nav-item">
-                    <a href="shop.html" className="nav-link">
-                      Shop
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a href="shop-filtter.html" className="nav-link">
-                      Shop Sidebar
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a href="single-product.html" className="nav-link">
-                      Product Details
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a href="cart.html" className="nav-link">
-                      Cart
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a href="checkout.html" className="nav-link">
-                      Checkout
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a href="success.html" className="nav-link">
-                      Success
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li className="nav-item">
-              <a href="javascript:void(0)" className="dropdown-toggle nav-link">
-                <span>Skills</span>
-              </a>
-              <ul className="dropdown-menu list-unstyle">
-                <Link to="/listening">
-                <li className="nav-item">
-                    
-                  <a className="nav-link">
-                    Listening
-                  </a>
+          <button
+            type="button"
+            className="close-btn bg-transparent position-relative lh-1 p-0 border-0"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            <i className="ri-close-line" />
+          </button>
+        </div>
+        <div className="offcanvas-body">
+          <ul className="responsive-menu">
+            <li className="responsive-menu-list">
+              <a href="javascript:void(0);">Home</a>
+              <ul className="responsive-menu-items">
+                <li>
+                  <a href="index.html">Home One</a>
                 </li>
-                </Link>
-
-                 <Link to="/reading">
-                <li className="nav-item">
-                  <a  className="nav-link">
-                    Reading
-                  </a>
+                <li>
+                  <a href="index-2.html">Home Two</a>
                 </li>
-                </Link>
-
-                <Link to="/writing">
-                <li className="nav-item">
-                  <a href="blog-details.html" className="nav-link">
-                    Writing
-                  </a>
+                <li>
+                  <a href="index-3.html">Home Three</a>
                 </li>
-                </Link>
-
-                <Link to="/speaking">
-                <li className="nav-item">
-                  <a href="blog-details.html" className="nav-link">
-                    Speaking
-                  </a>
-                </li>
-                </Link>
               </ul>
             </li>
-              <li className="nav-item">
-                <a
-                  href="javascript:void(0)"
-                  className="dropdown-toggle nav-link"
-                >
-                  Pages
-                </a>
-                <ul className="dropdown-menu list-unstyle">
-                  <li className="nav-item">
-                    <a href="sign-in.html" className="nav-link">
-                      Sign in
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a href="sign-up.html" className="nav-link">
-                      Sign Up
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      href="javascript:void(0)"
-                      className="dropdown-toggle nav-link"
-                    >
-                      Instructor
-                    </a>
-                    <ul className="dropdown-menu list-unstyle">
-                      <li className="nav-item">
-                        <a href="instructor.html" className="nav-link">
-                          Instructor
-                        </a>
-                      </li>
-                      <li className="nav-item">
-                        <a href="instructor2.html" className="nav-link">
-                          Instructor Tow
-                        </a>
-                      </li>
-                      <li className="nav-item">
-                        <a href="instructor-sidebar.html" className="nav-link">
-                          Instructor Sidebar
-                        </a>
-                      </li>
-                      <li className="nav-item">
-                        <a href="instructor-details.html" className="nav-link">
-                          Instructor Details
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="nav-item">
-                    <a href="faq.html" className="nav-link">
-                      FAQ
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      href="javascript:void(0)"
-                      className="dropdown-toggle nav-link"
-                    >
-                      Error
-                    </a>
-                    <ul className="dropdown-menu list-unstyle">
-                      <li className="nav-item">
-                        <a href="error-404.html" className="nav-link">
-                          Error One
-                        </a>
-                      </li>
-                      <li className="nav-item">
-                        <a href="error-sidebar-404.html" className="nav-link">
-                          Error Two
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li className="nav-item">
-                <a href="contact.html" className="nav-link">
-                  Contact
-                </a>
-              </li>
-            </ul>
+            <li>
+              <a href="about.html">About</a>
+            </li>
+            <li className="responsive-menu-list">
+              <a href="javascript:void(0);">Courses</a>
+              <ul className="responsive-menu-items">
+                <li>
+                  <a href="courses.html">Courses</a>
+                </li>
+                <li>
+                  <a href="courses-list.html">Course List</a>
+                </li>
+                <li>
+                  <a href="courses-grid.html">Courses Grid</a>
+                </li>
+                <li>
+                  <a href="course-details.html">Course Details</a>
+                </li>
+              </ul>
+            </li>
+            <li className="responsive-menu-list">
+              <a href="javascript:void(0);">Shop</a>
+              <ul className="responsive-menu-items">
+                <li>
+                  <a href="shop.html">Shop</a>
+                </li>
+                <li>
+                  <a href="shop-filtter.html">Shop Sidebar</a>
+                </li>
+                <li>
+                  <a href="single-product.html">Product Details</a>
+                </li>
+                <li>
+                  <a href="cart.html">Cart</a>
+                </li>
+                <li>
+                  <a href="checkout.html">Checkout</a>
+                </li>
+                <li>
+                  <a href="success.html">Success</a>
+                </li>
+              </ul>
+            </li>
+            <li className="responsive-menu-list">
+              <a href="javascript:void(0);" className="active">
+                Blog
+              </a>
+              <ul className="responsive-menu-items">
+                <li>
+                  <a href="blog.html" className="active">
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="blog-list.html">Blog List</a>
+                </li>
+                <li>
+                  <a href="blog-details.html">Blog Details</a>
+                </li>
+              </ul>
+            </li>
+            <li className="responsive-menu-list">
+              <a href="javascript:void(0);">Pages</a>
+              <ul className="responsive-menu-items">
+                <li>
+                  <a href="sign-in.html">Sign in</a>
+                </li>
+                <li>
+                  <a href="sign-up.html">Sign Up</a>
+                </li>
+                <li className="responsive-menu-list">
+                  <a href="javascript:void(0);">Instructor</a>
+                  <ul className="responsive-menu-items">
+                    <li>
+                      <a href="instructor.html">Instructor</a>
+                    </li>
+                    <li>
+                      <a href="instructor2.html">Instructor Tow</a>
+                    </li>
+                    <li>
+                      <a href="instructor-sidebar.html">Instructor Sidebar</a>
+                    </li>
+                    <li>
+                      <a href="instructor-details.html">Instructor Details</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="faq.html">FAQ</a>
+                </li>
+                <li className="responsive-menu-list">
+                  <a href="javascript:void(0);">Error</a>
+                  <ul className="responsive-menu-items">
+                    <li>
+                      <a href="error-404.html">Error One</a>
+                    </li>
+                    <li>
+                      <a href="error-sidebar-404.html">Error Tow</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <div className="other-option d-md-flex align-items-center">
             <div className="option-item">
-              <a href="contact.html" className="serarch-btn">
-                <i className="ri-user-3-line" />
-              </a>
-              <a href="cart.html" className="shop-btn">
-                <i className="ri-shopping-cart-2-line" />
-                <span className="cart-number">1</span>
-              </a>
-              <a href="contact.html" className="btn style-one box-shadow-1">
+              <a href="contact.html" className="btn style-one w-100">
                 Free Consulting
               </a>
             </div>
           </div>
-        </nav>
-      </div>
-    </div>
-  </div>
-
- 
-  {/* Navbar Area End */}
-  {/* Responsive Navbar Start */}
-  <div
-    className="responsive-navbar offcanvas offcanvas-end border-0"
-    data-bs-backdrop="static"
-    tabIndex={-1}
-    id="navbarOffcanvas"
-  >
-    <div className="offcanvas-header">
-      <a href="index.html" className="logo d-inline-block">
-        <img
-          className="logo-light"
-          src="assets/img/logo/logo.svg"
-          alt="Image"
-        />
-      </a>
-      <button
-        type="button"
-        className="close-btn bg-transparent position-relative lh-1 p-0 border-0"
-        data-bs-dismiss="offcanvas"
-        aria-label="Close"
-      >
-        <i className="ri-close-line" />
-      </button>
-    </div>
-    <div className="offcanvas-body">
-      <ul className="responsive-menu">
-        <li className="responsive-menu-list">
-          <a href="javascript:void(0);">Home</a>
-          <ul className="responsive-menu-items">
-            <li>
-              <a href="index.html">Home One</a>
-            </li>
-            <li>
-              <a href="index-2.html">Home Two</a>
-            </li>
-            <li>
-              <a href="index-3.html">Home Three</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="about.html">About</a>
-        </li>
-        <li className="responsive-menu-list">
-          <a href="javascript:void(0);">Courses</a>
-          <ul className="responsive-menu-items">
-            <li>
-              <a href="courses.html">Courses</a>
-            </li>
-            <li>
-              <a href="courses-list.html">Course List</a>
-            </li>
-            <li>
-              <a href="courses-grid.html">Courses Grid</a>
-            </li>
-            <li>
-              <a href="course-details.html">Course Details</a>
-            </li>
-          </ul>
-        </li>
-        <li className="responsive-menu-list">
-          <a href="javascript:void(0);">Shop</a>
-          <ul className="responsive-menu-items">
-            <li>
-              <a href="shop.html">Shop</a>
-            </li>
-            <li>
-              <a href="shop-filtter.html">Shop Sidebar</a>
-            </li>
-            <li>
-              <a href="single-product.html">Product Details</a>
-            </li>
-            <li>
-              <a href="cart.html">Cart</a>
-            </li>
-            <li>
-              <a href="checkout.html">Checkout</a>
-            </li>
-            <li>
-              <a href="success.html">Success</a>
-            </li>
-          </ul>
-        </li>
-        <li className="responsive-menu-list">
-          <a href="javascript:void(0);" className="active">
-            Blog
-          </a>
-          <ul className="responsive-menu-items">
-            <li>
-              <a href="blog.html" className="active">
-                Blog
-              </a>
-            </li>
-            <li>
-              <a href="blog-list.html">Blog List</a>
-            </li>
-            <li>
-              <a href="blog-details.html">Blog Details</a>
-            </li>
-          </ul>
-        </li>
-        <li className="responsive-menu-list">
-          <a href="javascript:void(0);">Pages</a>
-          <ul className="responsive-menu-items">
-            <li>
-              <a href="sign-in.html">Sign in</a>
-            </li>
-            <li>
-              <a href="sign-up.html">Sign Up</a>
-            </li>
-            <li className="responsive-menu-list">
-              <a href="javascript:void(0);">Instructor</a>
-              <ul className="responsive-menu-items">
-                <li>
-                  <a href="instructor.html">Instructor</a>
-                </li>
-                <li>
-                  <a href="instructor2.html">Instructor Tow</a>
-                </li>
-                <li>
-                  <a href="instructor-sidebar.html">Instructor Sidebar</a>
-                </li>
-                <li>
-                  <a href="instructor-details.html">Instructor Details</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="faq.html">FAQ</a>
-            </li>
-            <li className="responsive-menu-list">
-              <a href="javascript:void(0);">Error</a>
-              <ul className="responsive-menu-items">
-                <li>
-                  <a href="error-404.html">Error One</a>
-                </li>
-                <li>
-                  <a href="error-sidebar-404.html">Error Tow</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="contact.html">Contact</a>
-        </li>
-      </ul>
-      <div className="other-option d-md-flex align-items-center">
-        <div className="option-item">
-          <a href="contact.html" className="btn style-one w-100">
-            Free Consulting
-          </a>
         </div>
       </div>
-    </div>
-  </div>
-  {/* Responsive Navbar End */}
+      {/* Responsive Navbar End */}
 
+      {/* Hero Section Start */}
+      <div class="hero-section hero-bg position-relative">
+        <div class="container">
+          <div class="main-max-width">
+            <div className="owl-item active" style={{ width: 1170 }}>
+              <div className="silde-item">
+                <div className="row align-items-center">
+                  <div className="col-lg-7">
+                    <div className="content ">
+                      <h4 className="sub-title mb-25  ">
+                        KEY TO THE FUTURE FOR
+                      </h4>
+                      
+                      
+                      
+                      <h1 className="fs-50 mb-25 p-2">
+                        TEENAGE <span className="gradient-style">STUDENTS</span>{" "}
+                       
+                      </h1>
+                      
 
-
-
-   {/* Hero Section Start */}
-   <div className="hero-section hero-bg position-relative">
-        <div className="container">
-          <div className="main-max-width">
-            <div className="hero-slider owl-carousel owl-theme owl-loaded owl-drag">
-              <div className="owl-stage-outer">
-                <div
-                  className="owl-stage"
-                  style={{
-                    transform: "translate3d(-2340px, 0px, 0px)",
-                    transition: "all 0s ease 0s",
-                    width: 9360,
-                  }}
-                >
-                  <div className="owl-item cloned" style={{ width: 1170 }}>
-                    <div className="silde-item">
-                      <div className="row align-items-center">
-                        <div className="col-lg-7">
-                          <div className="content">
-                            <h4 className="sub-title mb-25">
-                              The Leader In Online Learning
-                            </h4>
-                            <h1 className="fs-50 mb-25">
-                              Grow Your{" "}
-                              <span className="gradient-style">Skills</span>{" "}
-                              Advance Your Career Path.
-                            </h1>
-                            <p>
-                              In the dynamic landscape of today's professional
-                              world, the key to success lies in continuous
-                              learning and skill Development. As industries
-                              evolve and technology advances,
-                            </p>
-                            <div className="her-btns mt-40">
-                              <a
-                                href="course-details.html"
-                                className="btn style-one mr-20"
-                              >
-                                Browser Course{" "}
-                                <img
-                                  src="assets/img/icon/long-arrow.svg"
-                                  alt="Image"
-                                />
-                              </a>
-                              <a href="about.html" className="btn style-two">
-                                Explore More
-                                <img
-                                  src="assets/img/icon/long-arrow.svg"
-                                  alt="Image"
-                                />
-                              </a>
-                            </div>
-                            <div className="book-icon bounce">
-                              <img src="assets/img/icon/book.svg" alt="image" />
-                            </div>
-                            <div className="idea-icon">
-                              <img src="assets/img/icon/idea.svg" alt="image" />
-                            </div>
-                            <div className="global-icon rotate">
-                              <img
-                                src="assets/img/icon/global.svg"
-                                alt="image"
-                              />
-                            </div>
-                            <div className="shape1 rotate">
-                              <img
-                                src="assets/img/icon/shape.svg"
-                                alt="image"
-                              />
-                            </div>
-                            <div className="shape2 moveHorizontal">
-                              <img
-                                src="assets/img/icon/shape-2.svg"
-                                alt="image"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-lg-5">
-                          <div className="hero-image position-relative ">
-                            <img
-                              className="position-relative index-2"
-                              src=" "
-                              alt="image"
-                            />
-                          </div>
-                        </div>
+                      <p>
+                        WE ALWAYS PROVIDE THE BEST ENGLISH EDUCATION FOR OUR TEENAGE STUDENTS AS THEY CAN FACE ANY KIND OF CHALLENGE IN THEIR LIVES AND AS A BRIDGE TO THE WORLD
+                      </p>
+                      
+                      
+                      <div className="her-btns mt-40">
+                        <a
+                          href="course-details.html"
+                          className="btn style-one mr-20"
+                        >
+                          Browser Course{" "}
+                          <img
+                            src="assets/img/icon/long-arrow.svg"
+                            alt="Image"
+                          />
+                        </a>
+                        <a href="about.html" className="btn style-two">
+                          Explore More
+                          <img
+                            src="assets/img/icon/long-arrow.svg"
+                            alt="Image"
+                          />
+                        </a>
+                      </div>
+                      <div className="book-icon bounce">
+                        <img src="assets/img/icon/book.svg" alt="image" />
+                      </div>
+                      <div className="idea-icon">
+                        <img src="assets/img/icon/idea.svg" alt="image" />
+                      </div>
+                      <div className="global-icon rotate">
+                        <img src="assets/img/icon/global.svg" alt="image" />
                       </div>
                     </div>
                   </div>
-                  <div className="owl-item cloned" style={{ width: 1170 }}>
-                    <div className="silde-item">
-                      <div className="row align-items-center">
-                        <div className="col-lg-7">
-                          <div className="content">
-                            <h4 className="sub-title mb-25">
-                              The Leader In Online Learning
-                            </h4>
-                            <h1 className="fs-50 mb-25">
-                              Welcome To{" "}
-                              <span className="gradient-style">Online</span>{" "}
-                              Education Solutions.
-                            </h1>
-                            <p>
-                              In the dynamic landscape of today's professional
-                              world, the key to success lies in continuous
-                              learning and skill Development. As industries
-                              evolve and technology advances,
-                            </p>
-                            <div className="her-btns mt-40">
-                              <a
-                                href="course-details.html"
-                                className="btn style-one mr-20"
-                              >
-                                Browser Course{" "}
-                                <img
-                                  src="assets/img/icon/long-arrow.svg"
-                                  alt="Image"
-                                />
-                              </a>
-                              <a href="about.html" className="btn style-two">
-                                Explore More
-                                <img
-                                  src="assets/img/icon/long-arrow.svg"
-                                  alt="Image"
-                                />
-                              </a>
-                            </div>
-                            <div className="book-icon bounce">
-                              <img src="assets/img/icon/book.svg" alt="image" />
-                            </div>
-                            <div className="idea-icon">
-                              <img src="assets/img/icon/idea.svg" alt="image" />
-                            </div>
-                            <div className="global-icon rotate">
-                              <img
-                                src="assets/img/icon/global.svg"
-                                alt="image"
-                              />
-                            </div>
-                            <div className="shape1 rotate">
-                              <img
-                                src="assets/img/icon/shape.svg"
-                                alt="image"
-                              />
-                            </div>
-                            <div className="shape2 moveHorizontal">
-                              <img
-                                src="assets/img/icon/shape-2.svg"
-                                alt="image"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-lg-5">
-                          <div className="hero-image position-relative">
-                            <img
-                              className="position-relative index-2"
-                              src="assets/img/all-img/hero-img2.png"
-                              alt="image"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="owl-item active" style={{ width: 1170 }}>
-                    <div className="silde-item">
-                      <div className="row align-items-center">
-                        <div className="col-lg-7">
-                          <div className="content">
-                            <h4 className="sub-title mb-25">
-                              The Leader In Online Learning
-                            </h4>
-                            <h1 className="fs-50 mb-25">
-                              Grow Your{" "}
-                              <span className="gradient-style">Skills</span>{" "}
-                              Advance Your Career Path.
-                            </h1>
-                            <p>
-                              In the dynamic landscape of today's professional
-                              world, the key to success lies in continuous
-                              learning and skill Development. As industries
-                              evolve and technology advances,
-                            </p>
-                            <div className="her-btns mt-40">
-                              <a
-                                href="course-details.html"
-                                className="btn style-one mr-20"
-                              >
-                                Browser Course{" "}
-                                <img
-                                  src="assets/img/icon/long-arrow.svg"
-                                  alt="Image"
-                                />
-                              </a>
-                              <a href="about.html" className="btn style-two">
-                                Explore More
-                                <img
-                                  src="assets/img/icon/long-arrow.svg"
-                                  alt="Image"
-                                />
-                              </a>
-                            </div>
-                            <div className="book-icon bounce">
-                              <img src="assets/img/icon/book.svg" alt="image" />
-                            </div>
-                            <div className="idea-icon">
-                              <img src="assets/img/icon/idea.svg" alt="image" />
-                            </div>
-                            <div className="global-icon rotate">
-                              <img
-                                src="assets/img/icon/global.svg"
-                                alt="image"
-                              />
-                            </div>
-                            <div className="shape1 rotate">
-                              <img
-                                src="assets/img/icon/shape.svg"
-                                alt="image"
-                              />
-                            </div>
-                            <div className="shape2 moveHorizontal">
-                              <img
-                                src="assets/img/icon/shape-2.svg"
-                                alt="image"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-lg-5">
-                          <div className="hero-image position-relative">
-                            <img
-                              className="position-relative index-2"
-                              src="assets/img/all-img/hero-img.png"
-                              alt="image"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="owl-item" style={{ width: 1170 }}>
-                    <div className="silde-item">
-                      <div className="row align-items-center">
-                        <div className="col-lg-7">
-                          <div className="content">
-                            <h4 className="sub-title mb-25">
-                              The Leader In Online Learning
-                            </h4>
-                            <h1 className="fs-50 mb-25">
-                              Welcome To{" "}
-                              <span className="gradient-style">Online</span>{" "}
-                              Education Solutions.
-                            </h1>
-                            <p>
-                              In the dynamic landscape of today's professional
-                              world, the key to success lies in continuous
-                              learning and skill Development. As industries
-                              evolve and technology advances,
-                            </p>
-                            <div className="her-btns mt-40">
-                              <a
-                                href="course-details.html"
-                                className="btn style-one mr-20"
-                              >
-                                Browser Course{" "}
-                                <img
-                                  src="assets/img/icon/long-arrow.svg"
-                                  alt="Image"
-                                />
-                              </a>
-                              <a href="about.html" className="btn style-two">
-                                Explore More
-                                <img
-                                  src="assets/img/icon/long-arrow.svg"
-                                  alt="Image"
-                                />
-                              </a>
-                            </div>
-                            <div className="book-icon bounce">
-                              <img src="assets/img/icon/book.svg" alt="image" />
-                            </div>
-                            <div className="idea-icon">
-                              <img src="assets/img/icon/idea.svg" alt="image" />
-                            </div>
-                            <div className="global-icon rotate">
-                              <img
-                                src="assets/img/icon/global.svg"
-                                alt="image"
-                              />
-                            </div>
-                            <div className="shape1 rotate">
-                              <img
-                                src="assets/img/icon/shape.svg"
-                                alt="image"
-                              />
-                            </div>
-                            <div className="shape2 moveHorizontal">
-                              <img
-                                src="assets/img/icon/shape-2.svg"
-                                alt="image"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-lg-5">
-                          <div className="hero-image position-relative">
-                            <img
-                              className="position-relative index-2"
-                              src="assets/img/all-img/hero-img2.png"
-                              alt="image"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="owl-item " style={{ width: 1170 }}>
-                    <div className="silde-item">
-                      <div className="row align-items-center">
-                        <div className="col-lg-7">
-                          <div className="content">
-                            <h4 className="sub-title mb-25">
-                              The Leader In Online Learning
-                            </h4>
-                            <h1 className="fs-50 mb-25 ">
-                              Grow Your{" "}
-                              <span className="gradient-style">Skills</span>{" "}
-                              Advance Your Career Path.
-                            </h1>
-                            <p>
-                              In the dynamic landscape of today's professional
-                              world, the key to success lies in continuous
-                              learning and skill Development. As industries
-                              evolve and technology advances,
-                            </p>
-                            <div className="her-btns mt-40">
-                              <a
-                                href="course-details.html"
-                                className="btn style-one mr-20"
-                              >
-                                Browser Course{" "}
-                                <img
-                                  src="assets/img/icon/long-arrow.svg"
-                                  alt="Image"
-                                />
-                              </a>
-                              <a href="about.html" className="btn style-two">
-                                Explore More
-                                <img
-                                  src="assets/img/icon/long-arrow.svg"
-                                  alt="Image"
-                                />
-                              </a>
-                            </div>
-                            <div className="book-icon bounce">
-                              <img src="assets/img/icon/book.svg" alt="image" />
-                            </div>
-                            <div className="idea-icon">
-                              <img src="assets/img/icon/idea.svg" alt="image" />
-                            </div>
-                            <div className="global-icon rotate">
-                              <img
-                                src="assets/img/icon/global.svg"
-                                alt="image"
-                              />
-                            </div>
-                            <div className="shape1 rotate">
-                              <img
-                                src="assets/img/icon/shape.svg"
-                                alt="image"
-                              />
-                            </div>
-                            <div className="shape2 moveHorizontal">
-                              <img
-                                src="assets/img/icon/shape-2.svg"
-                                alt="image"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-lg-5">
-                          <div className="hero-image position-relative">
-                            <img
-                              className="position-relative index-2"
-                              src="assets/img/all-img/hero-img.png"
-                              alt="image"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="owl-item" style={{ width: 1170 }}>
-                    <div className="silde-item">
-                      <div className="row align-items-center">
-                        <div className="col-lg-7">
-                          <div className="content">
-                            <h4 className="sub-title mb-25">
-                              The Leader In Online Learning
-                            </h4>
-                            <h1 className="fs-50 mb-25">
-                              Welcome To{" "}
-                              <span className="gradient-style">Online</span>{" "}
-                              Education Solutions.
-                            </h1>
-                            <p>
-                              In the dynamic landscape of today's professional
-                              world, the key to success lies in continuous
-                              learning and skill Development. As industries
-                              evolve and technology advances,
-                            </p>
-                            <div className="her-btns mt-40">
-                              <a
-                                href="course-details.html"
-                                className="btn style-one mr-20"
-                              >
-                                Browser Course{" "}
-                                <img
-                                  src="assets/img/icon/long-arrow.svg"
-                                  alt="Image"
-                                />
-                              </a>
-                              <a href="about.html" className="btn style-two">
-                                Explore More
-                                <img
-                                  src="assets/img/icon/long-arrow.svg"
-                                  alt="Image"
-                                />
-                              </a>
-                            </div>
-                            <div className="book-icon bounce">
-                              <img src="assets/img/icon/book.svg" alt="image" />
-                            </div>
-                            <div className="idea-icon">
-                              <img src="assets/img/icon/idea.svg" alt="image" />
-                            </div>
-                            <div className="global-icon rotate">
-                              <img
-                                src="assets/img/icon/global.svg"
-                                alt="image"
-                              />
-                            </div>
-                            <div className="shape1 rotate">
-                              <img
-                                src="assets/img/icon/shape.svg"
-                                alt="image"
-                              />
-                            </div>
-                            <div className="shape2 moveHorizontal">
-                              <img
-                                src="assets/img/icon/shape-2.svg"
-                                alt="image"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-lg-5">
-                          <div className="hero-image position-relative">
-                            <img
-                              className="position-relative index-2"
-                              src="assets/img/all-img/hero-img2.png"
-                              alt="image"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="owl-item cloned" style={{ width: 1170 }}>
-                    <div className="silde-item">
-                      <div className="row align-items-center">
-                        <div className="col-lg-7">
-                          <div className="content">
-                            <h4 className="sub-title mb-25">
-                              The Leader In Online Learning
-                            </h4>
-                            <h1 className="fs-50 mb-25">
-                              Grow Your{" "}
-                              <span className="gradient-style">Skills</span>{" "}
-                              Advance Your Career Path.
-                            </h1>
-                            <p>
-                              In the dynamic landscape of today's professional
-                              world, the key to success lies in continuous
-                              learning and skill Development. As industries
-                              evolve and technology advances,
-                            </p>
-                            <div className="her-btns mt-40">
-                              <a
-                                href="course-details.html"
-                                className="btn style-one mr-20"
-                              >
-                                Browser Course{" "}
-                                <img
-                                  src="assets/img/icon/long-arrow.svg"
-                                  alt="Image"
-                                />
-                              </a>
-                              <a href="about.html" className="btn style-two">
-                                Explore More
-                                <img
-                                  src="assets/img/icon/long-arrow.svg"
-                                  alt="Image"
-                                />
-                              </a>
-                            </div>
-                            <div className="book-icon bounce">
-                              <img src="assets/img/icon/book.svg" alt="image" />
-                            </div>
-                            <div className="idea-icon">
-                              <img src="assets/img/icon/idea.svg" alt="image" />
-                            </div>
-                            <div className="global-icon rotate">
-                              <img
-                                src="assets/img/icon/global.svg"
-                                alt="image"
-                              />
-                            </div>
-                            <div className="shape1 rotate">
-                              <img
-                                src="assets/img/icon/shape.svg"
-                                alt="image"
-                              />
-                            </div>
-                            <div className="shape2 moveHorizontal">
-                              <img
-                                src="assets/img/icon/shape-2.svg"
-                                alt="image"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-lg-5">
-                          <div className="hero-image position-relative">
-                            <img
-                              className="position-relative index-2"
-                              src="assets/img/all-img/hero-img.png"
-                              alt="image"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="owl-item cloned" style={{ width: 1170 }}>
-                    <div className="silde-item">
-                      <div className="row align-items-center">
-                        <div className="col-lg-7">
-                          <div className="content">
-                            <h4 className="sub-title mb-25">
-                              The Leader In Online Learning
-                            </h4>
-                            <h1 className="fs-50 mb-25">
-                              Welcome To{" "}
-                              <span className="gradient-style">Online</span>{" "}
-                              Education Solutions.
-                            </h1>
-                            <p>
-                              In the dynamic landscape of today's professional
-                              world, the key to success lies in continuous
-                              learning and skill Development. As industries
-                              evolve and technology advances,
-                            </p>
-                            <div className="her-btns mt-40">
-                              <a
-                                href="course-details.html"
-                                className="btn style-one mr-20"
-                              >
-                                Browser Course{" "}
-                                <img
-                                  src="assets/img/icon/long-arrow.svg"
-                                  alt="Image"
-                                />
-                              </a>
-                              <a href="about.html" className="btn style-two">
-                                Explore More
-                                <img
-                                  src="assets/img/icon/long-arrow.svg"
-                                  alt="Image"
-                                />
-                              </a>
-                            </div>
-                            <div className="book-icon bounce">
-                              <img src="assets/img/icon/book.svg" alt="image" />
-                            </div>
-                            <div className="idea-icon">
-                              <img src="assets/img/icon/idea.svg" alt="image" />
-                            </div>
-                            <div className="global-icon rotate">
-                              <img
-                                src="assets/img/icon/global.svg"
-                                alt="image"
-                              />
-                            </div>
-                            <div className="shape1 rotate">
-                              <img
-                                src="assets/img/icon/shape.svg"
-                                alt="image"
-                              />
-                            </div>
-                            <div className="shape2 moveHorizontal">
-                              <img
-                                src="assets/img/icon/shape-2.svg"
-                                alt="image"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-lg-5">
-                          <div className="hero-image position-relative">
-                            <img
-                              className="position-relative index-2"
-                              src="assets/img/all-img/hero-img2.png"
-                              alt="image"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
                 </div>
-              </div>
-              <div className="owl-nav disabled">
-                <button type="button" role="presentation" className="owl-prev">
-                  <span aria-label="Previous">‹</span>
-                </button>
-                <button type="button" role="presentation" className="owl-next">
-                  <span aria-label="Next">›</span>
-                </button>
-              </div>
-              <div className="owl-dots">
-                <button
-                  role="button"
-                  className="owl-dot active"
-                  fdprocessedid="b4telg"
-                >
-                  <span />
-                </button>
-                <button
-                  role="button"
-                  className="owl-dot"
-                  fdprocessedid="3944mr"
-                >
-                  <span />
-                </button>
-                <button
-                  role="button"
-                  className="owl-dot"
-                  fdprocessedid="925epl"
-                >
-                  <span />
-                </button>
-                <button
-                  role="button"
-                  className="owl-dot"
-                  fdprocessedid="fd6bhs"
-                >
-                  <span />
-                </button>
               </div>
             </div>
           </div>
@@ -2834,8 +2234,7 @@ function Index() {
         <i className="ri-arrow-up-s-line" />
       </button>
     </div>
-   
-  )
+  );
 }
 
-export default Index
+export default Index;

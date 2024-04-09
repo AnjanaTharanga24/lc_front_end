@@ -1,6 +1,5 @@
 import React from "react";
-import SideBar from "../component/SideBar";
-import SideBar2 from "../component/SideBar2";
+
 import { Link } from "react-router-dom";
 
 function Listening() {
