@@ -7,6 +7,7 @@ import Writing from "./pages/Writing";
 import Speaking from "./pages/Speaking";
 import Reading from "./pages/Reading";
 import Register from "./pages/Register";
+import Test from "./pages/Test";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/speaking" element={<Speaking/>}/>
         <Route path="/reading" element={<Reading/>}/>
         <Route path="/register" element={<Register/>}/>
+        <Route path="/test" element={<Test/>}/>
 
       </Routes>
     </BrowserRouter>

@@ -219,6 +219,8 @@ body {
     display: flex;
     margin: 0 -10px;
     position: relative;
+    padding:10px;
+    
     
 }
 .inner .form-row .form-holder {

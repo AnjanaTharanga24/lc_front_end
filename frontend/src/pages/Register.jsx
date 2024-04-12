@@ -1,7 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Register() {
+
+  const [students, setStudents] = useState([{ name: '', age: '' }]);
+
+  const handleInputChange = (index, event) => {
+    const { name, value } = event.target;
+    const updatedStudents = [...students];
+    updatedStudents[index] = { ...updatedStudents[index], [name]: value };
+    setStudents(updatedStudents);
+  };
+
+  const handleAddStudent = () => {
+    setStudents([...students, { name: '', age: '' }]);
+  };
+
   return (
     <div>
     <>
@@ -840,7 +854,7 @@ export default function Register() {
 
 
 <div className="page-content wizard-v7-content shadow-lg  mb-5 bg-white rounded" style={{width:"850px", marginLeft:"400px"}}>
-  <div className="wizard-form" >
+  <div className="wizard-form " >
     <form className="form-register" action="#" method="post">
       <div id="form-total" >
         {/* SECTION 1 */}
@@ -958,6 +972,140 @@ export default function Register() {
               </div>
             </div>
 
+           
+
+          </div>
+        </section>
+        {/* SECTION 2 */}
+        <h2>
+          <p className="step-icon">
+            <span>2</span>
+          </p>
+          <div className="step-text">
+            <span className="step-inner-1">Student Details</span>
+            <span className="step-inner-2">Child Details</span>
+          </div>
+        </h2>
+        <section>
+      <div className="inner">
+        <div className="wizard-header">
+          <h3 className="heading">Student Details</h3>
+        </div>
+        {students.map(student => (
+          <div key={student.id}>
+
+            <div className="form-row">
+              <div className="form-holder form-holder-2">
+                <label htmlFor={`student_name_${student.id}`}>Student Name</label>
+                <input
+                  type="text"
+                  name={`student_name_${student.id}`}
+                  value={student.name}
+                  onChange={(e) => handleInputChange(student.id, e)}
+                  className="form-control"
+                  placeholder="Student Name"
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="form-row">
+              <div className="form-holder form-holder-2">
+                <label htmlFor={`student_age_${student.id}`}>Student Age</label>
+                <input
+                  type="number"
+                  name={`student_age_${student.id}`}
+                  value={student.age}
+                  onChange={(e) => handleInputChange(student.id, e)}
+                  className="form-control"
+                  placeholder="Student Age"
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="form-row " >
+              <div className="form-holder form-holder-2">
+                <label htmlFor="">Gender</label>
+                <select className="form-control" 
+                  
+                  >
+                    <option value="">Select Gender</option>
+                    <option value="">Male</option>
+                    <option value="">Female</option>
+                  </select>
+              </div>
+            </div>
+
+            <div className="form-row">
+              <div className="form-holder form-holder-2">
+                <label htmlFor={`student_dob_${student.id}`}>Date of Birth</label>
+                <input
+                  type="date"
+                  name={`student_dob_${student.id}`}
+                  value={student.dob}
+                  onChange={(e) => handleInputChange(student.id, e)}
+                  className="form-control"
+                  required
+                />
+              </div>
+              </div>
+
+              <div className="form-row " >
+              <div className="form-holder form-holder-2">
+                <label htmlFor="">Exam Level</label>
+                <select className="form-control" 
+                  
+                  >
+                    <option value="">Select Exam Level</option>
+                    <option value="">Level 1</option>
+                    <option value="">Level 2</option>
+                  </select>
+              </div>
+            </div>
+
+            <div className="form-row " >
+              <div className="form-holder form-holder-2">
+                <label htmlFor="">Exam Level</label>
+                <select className="form-control" 
+                  
+                  >
+                    <option value="">Select Grade</option>
+                    <option value="">Grade 1</option>
+                    <option value="">Grade 2</option>
+                    <option value="">Grade 3</option>
+                    <option value="">Grade 4</option>
+                    <option value="">Grade 5</option>
+
+
+                  </select>
+              </div>
+            </div>
+
+          </div>
+        ))}
+        <button type="button" className="btn btn-primary" onClick={handleAddStudent}>Add Student</button>
+      </div>
+    </section>
+
+        {/* SECTION 3 */}
+        <h2>
+          <p className="step-icon">
+            <span>3</span>
+          </p>
+          <div className="step-text">
+            <span className="step-inner-1">Add Password</span>
+            <span className="step-inner-2">your password</span>
+          </div>
+        </h2>
+        <section >
+          <div className="inner ">
+            <div className="wizard-header">
+              <h3 className="heading">Password Details</h3>
+            </div>
+
+           
+
             <div className="form-row">
               <div className="form-holder form-holder-2">
                 <label htmlFor="password">Password</label>
@@ -971,6 +1119,9 @@ export default function Register() {
                 />
               </div>
             </div>
+
+          
+          
 
             <div className="form-row">
               <div className="form-holder form-holder-2">
@@ -986,123 +1137,19 @@ export default function Register() {
               </div>
             </div>
 
-          </div>
-        </section>
-        {/* SECTION 2 */}
-        <h2>
-          <p className="step-icon">
-            <span>2</span>
-          </p>
-          <div className="step-text">
-            <span className="step-inner-1">Student Details</span>
-            <span className="step-inner-2">Child Details</span>
-          </div>
-        </h2>
-        <section>
-          <div className="inner">
-            <div className="wizard-header">
-              <h3 className="heading">Student Details</h3>
-            </div>
+          
+     
+            
 
+           
 
-            {/* <div className="form-row">
-              <div className="form-holder form-holder-2">
-                <label htmlFor="card_name">Card Holder Name</label>
-                <input
-                  type="text"
-                  name="card_name"
-                  id="card_name"
-                  placeholder="Taylor Fuller"
-                  className="form-control"
-                  required=""
-                />
-              </div>
-            </div>
-            <div className="form-row">
-              <div className="form-holder form-holder-2">
-                <label htmlFor="card_number">Card Number</label>
-                <input
-                  type="text"
-                  name="card_number"
-                  id="card_number"
-                  placeholder="4224-3228-6160-5079"
-                  className="form-control"
-                  required=""
-                />
-              </div>
-            </div>
-            <div className="form-row">
-              <div className="form-holder form-holder-2">
-                <label htmlFor="cvc">CVC</label>
-                <input
-                  type="password"
-                  name="cvc"
-                  id="cvc"
-                  className="form-control"
-                  required=""
-                />
-              </div>
-            </div>
-            <div className="form-row">
-              <div className="form-holder form-holder-2">
-                <label htmlFor="expiration">Expiration(MM/YYYY)</label>
-                <input
-                  type="text"
-                  name="expiration"
-                  id="expiration"
-                  placeholder="MM/YYYY"
-                  className="form-control"
-                  required=""
-                />
-              </div>
-            </div> */}
+            
 
-
-
-
-
-
+           
 
           </div>
         </section>
-        {/* SECTION 3 */}
-        <h2>
-          <p className="step-icon">
-            <span>3</span>
-          </p>
-          <div className="step-text">
-            <span className="step-inner-1">Agreement</span>
-            <span className="step-inner-2">Our site policy</span>
-          </div>
-        </h2>
-        <section>
-          <div className="inner">
-            <div className="wizard-header">
-              <h3 className="heading">Agreement</h3>
-            </div>
-            <div className="form-row">
-              <div className="form-holder form-holder-2">
-                <div className="content-inner">
-                  <p>
-                    Massa placerat duis ultricies lacus sed turpis tin Elementum
-                    sagittis vitae et leo duis ut diam quam nulla. Viverra
-                    mauris in aliquam sem fringilla ut. Id leo in vitae turpis
-                    massa sed elementum tempus. Aliquet enim tortor at auctor
-                    urna nunc id cursus. Nulla aliquet enim tortor at auctor
-                    .Consquat nisl vel pretium lectus quam id leo.
-                  </p>
-                  <div className="form-checkbox">
-                    <label className="container">
-                      <p>I read agreement and i have not any objection.</p>
-                      <input type="checkbox" name="checkbox" />
-                      <span className="checkmark" />
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+
       </div>
     </form>
   </div>
