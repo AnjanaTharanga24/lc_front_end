@@ -20,9 +20,6 @@ function App() {
         <Route path="/reading" element={<Reading/>}/>
         <Route path="/register" element={<Register/>}/>
 
-
-
-        
       </Routes>
     </BrowserRouter>
   );
