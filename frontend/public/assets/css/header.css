@@ -1,13 +1,19 @@
+.navbar{
+  width: 110%;
+}
+
 .navbar-area.style-one{
   z-index: 10;
-  position: absolute;
-  width: 100%;
+  /* position: absolute; */
+  width: 100% ;
+}
+.navbar-area{
 }
 .navbar-area.style-one.sticky{
   position: fixed !important;
 }
 .navbar-area.style-2 {
-  border-bottom: 1px solid #c6c9d4;
+  border-bottom: 0px solid #c6c9d4;
 }
 .navbar-area.style-2.sticky {
   top: 0;
@@ -44,10 +50,12 @@
 .navbar-area .navbar-top .option-item {
   color: var(--whiteColor);
   padding-left: 15px;
+ 
 }
 .navbar-area .navbar-top .option-item .btn-top {
   color: var(--whiteColor);
   padding-left: 5px;
+  
 }
 .navbar-right span {
   font-weight: 600;

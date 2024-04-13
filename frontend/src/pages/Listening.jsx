@@ -352,7 +352,7 @@ function Listening() {
 
         {/* Navbar Area End */}
         {/* Responsive Navbar Start */}
-        <div
+        {/* <div
           className="responsive-navbar offcanvas offcanvas-end border-0"
           data-bs-backdrop="static"
           tabIndex={-1}
@@ -506,7 +506,7 @@ function Listening() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Responsive Navbar End */}
 
         {/*  Page Title Area Start*/}
