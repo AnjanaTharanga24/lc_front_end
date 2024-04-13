@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SideBar from "../component/SideBar";
 
 function Index() {
   return (
     <div>
       {/* Navbar Area Start */}
-      <div className="navbar-area" id="navbar">
+      {/* <div className="navbar-area" id="navbar">
         <div className="navbar-top">
           <div className="container">
             <div className="main-max-width " style={{ width: "1500px" }}>
@@ -239,93 +240,20 @@ function Index() {
                       </Link>
                     </ul>
                   </li>
+                    <Link to='signin'>
                   <li className="nav-item">
                     <a
-                      href="javascript:void(0)"
-                      className="dropdown-toggle nav-link"
+                     
+                      className=" nav-link"
                     >
-                      Pages
+                      Sign in
                     </a>
-                    <ul className="dropdown-menu list-unstyle">
-                      <li className="nav-item">
-                        <a href="sign-in.html" className="nav-link">
-                          Sign in
-                        </a>
-                      </li>
-                      <li className="nav-item">
-                        <a href="sign-up.html" className="nav-link">
-                          Sign Up
-                        </a>
-                      </li>
-                      <li className="nav-item">
-                        <a
-                          href="javascript:void(0)"
-                          className="dropdown-toggle nav-link"
-                        >
-                          Instructor
-                        </a>
-                        <ul className="dropdown-menu list-unstyle">
-                          <li className="nav-item">
-                            <a href="instructor.html" className="nav-link">
-                              Instructor
-                            </a>
-                          </li>
-                          <li className="nav-item">
-                            <a href="instructor2.html" className="nav-link">
-                              Instructor Tow
-                            </a>
-                          </li>
-                          <li className="nav-item">
-                            <a
-                              href="instructor-sidebar.html"
-                              className="nav-link"
-                            >
-                              Instructor Sidebar
-                            </a>
-                          </li>
-                          <li className="nav-item">
-                            <a
-                              href="instructor-details.html"
-                              className="nav-link"
-                            >
-                              Instructor Details
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li className="nav-item">
-                        <a href="faq.html" className="nav-link">
-                          FAQ
-                        </a>
-                      </li>
-                      <li className="nav-item">
-                        <a
-                          href="javascript:void(0)"
-                          className="dropdown-toggle nav-link"
-                        >
-                          Error
-                        </a>
-                        <ul className="dropdown-menu list-unstyle">
-                          <li className="nav-item">
-                            <a href="error-404.html" className="nav-link">
-                              Error One
-                            </a>
-                          </li>
-                          <li className="nav-item">
-                            <a
-                              href="error-sidebar-404.html"
-                              className="nav-link"
-                            >
-                              Error Two
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
+                    
                   </li>
+                  </Link>
 
                   <Link to='register'>
-                  <li className="nav-item">
+                  <li className="nav-item" style={{marginLeft:"10px"}}>
                     <a href="contact.html" className="nav-link">
                       Register
                     </a>
@@ -348,11 +276,11 @@ function Index() {
             </nav>
           </div>
         </div>
-      </div>
-
+      </div> */}
+       <SideBar/>
       {/* Navbar Area End */}
       {/* Responsive Navbar Start */}
-      <div
+      {/* <div
         className="responsive-navbar offcanvas offcanvas-end border-0"
         data-bs-backdrop="static"
         tabIndex={-1}
@@ -506,7 +434,7 @@ function Index() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* Responsive Navbar End */}
 
       {/* Hero Section Start */}

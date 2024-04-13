@@ -27,14 +27,14 @@ body {
 }
 .wizard-v7-content   {
 	background: #fff;
-	width: 100%; /* Change width to 100% */
+	width: 100%; 
 	border-radius: 10px;
-	margin: 0 auto; /* Remove negative margin */
+	margin: 0 auto;
 	font-family: 'Open Sans', sans-serif;
 	position: relative;
 	display: flex;
 	display: -webkit-flex;
-	flex-direction: column; /* Change flex-direction to column */
+	flex-direction: column; 
 }
 
 

@@ -8,6 +8,9 @@ import Speaking from "./pages/Speaking";
 import Reading from "./pages/Reading";
 import Register from "./pages/Register";
 import Test from "./pages/Test";
+import SignIn from "./pages/SignIn";
+import New from "./pages/New";
+import ParentDashboard from "./pages/ParentDashboard";
 
 
 function App() {
@@ -21,6 +24,12 @@ function App() {
         <Route path="/reading" element={<Reading/>}/>
         <Route path="/register" element={<Register/>}/>
         <Route path="/test" element={<Test/>}/>
+        <Route path="/signin" element={<SignIn/>}/>
+        <Route path="/new" element={<New/>}/>
+        <Route path="/parent-dashboard" element={<ParentDashboard/>}/>
+
+
+
 
       </Routes>
     </BrowserRouter>
