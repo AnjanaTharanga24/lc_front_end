@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../css/parentSidebar.css";
+import { Link } from "react-router-dom";
 export default function ParentDashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -36,6 +37,7 @@ export default function ParentDashboard() {
             <div className="sidebar-content">
               <div className="sidebar-brand">
                 <img
+                href="/home"
                   className="logo-light "
                   src="assets/img/logo/ls.png"
                   alt="logo"
@@ -63,37 +65,21 @@ export default function ParentDashboard() {
                   </span>
                 </div>
               </div>
-              {/* sidebar-header  */}
-              {/* <div className="sidebar-search">
-          <div>
-            <div className="input-group">
-              <input
-                type="text"
-                className="form-control search-menu"
-                placeholder="Search..."
-              />
-              <div className="input-group-append">
-                <span className="input-group-text">
-                  <i className="fa fa-search" aria-hidden="true" />
-                </span>
-              </div>
-            </div>
-          </div>
-        </div> */}
-              {/* sidebar-search  */}
+
               <div className="sidebar-menu" style={{ fontSize: "17px" }}>
                 <ul>
                   <li className="header-menu">
                     <span className="">General</span>
                   </li>
                   <li className="sidebar-dropdown">
-                    <a href="#" onClick={() => toggleDropdown(1)}>
+                    <a href="/children" onClick={() => toggleDropdown(1)}>
                       <i className="fa fa-tachometer-alt bg-light" />
                       <span>Children</span>
                       <span className="badge badge-pill badge-warning">
                         New
                       </span>
                     </a>
+
                     <div
                       className={`sidebar-submenu ${
                         activeDropdown === 1 ? "active" : ""
@@ -118,7 +104,7 @@ export default function ParentDashboard() {
                     </div>
                   </li>
                   <li className="sidebar-dropdown">
-                    <a href="#">
+                    <a href="/bank-payment">
                       <i className="fa fa-shopping-cart bg-light" />
                       <span>Bank Payment</span>
                       <span className="badge badge-pill badge-danger">3</span>
@@ -250,174 +236,190 @@ export default function ParentDashboard() {
           </nav>
 
           {/* sidebar-wrapper  */}
-          <main className="page-content " style={{background:"#f2f2f2"}}>
+          <main className="page-content " style={{ background: "#f2f2f2" }}>
             <div className="container-fluid">
               <h2>Parent Dashboard</h2>
               <hr />
-              
+
               <div className="row">
-                <div className="form-group col-md-12">
-                  <p>
-                    This is a responsive sidebar template with dropdown menu
-                    based on bootstrap 4 framework.
-                  </p>
-                  <p>
-                    {" "}
-                    You can find the complete code on{" "}
-                    <a
-                      href="https://github.com/azouaoui-med/pro-sidebar-template"
-                      target="_blank"
-                    >
-                      Github
-                    </a>
-                    , it contains more themes and background image option
-                  </p>
-                </div>
-                {/* <div className="form-group col-md-12">
-                  <iframe
-                    src="https://ghbtns.com/github-btn.html?user=azouaoui-med&repo=pro-sidebar-template&type=star&count=true&size=small"
-                    frameBorder={0}
-                    scrolling={0}
-                    width="90px"
-                    height="30px"
-                  />
-                  <iframe
-                    src="https://ghbtns.com/github-btn.html?user=azouaoui-med&repo=pro-sidebar-template&type=fork&count=true&size=small"
-                    frameBorder={0}
-                    scrolling={0}
-                    width="90px"
-                    height="30px"
-                  />
-                </div> */}
-                <div className="form-group col-md-12">
-                  <div className="card" role="alert" style={{height:"200px"}}>
-                    {/* <h4 className="alert-heading">New !</h4> */}
-                    {/* <p>
-                      New react pro sidebar library is now available on{" "}
-                      <a
-                        href="https://www.npmjs.com/package/react-pro-sidebar"
-                        target="_blank"
-                      >
-                        npm
-                      </a>{" "}
-                      <a
-                        href="https://github.com/azouaoui-med/react-pro-sidebar"
-                        target="_blank"
-                      >
-                        <img
-                          alt="GitHub stars"
-                          src="https://img.shields.io/github/stars/azouaoui-med/react-pro-sidebar?style=social"
-                        />
-                      </a>
-                    </p> */}
-                    {/* <a
-                      href="https://github.com/azouaoui-med/react-pro-sidebar"
-                      target="_blank"
-                      className="btn btn-sm btn-primary mr-2"
-                    >
-                      Github
-                    </a> */}
-                    {/* <a
-                      href="https://azouaoui-med.github.io/react-pro-sidebar"
-                      target="_blank"
-                      className="btn btn-sm btn-success"
-                    >
-                      Demo
-                    </a> */}
+                <div className="form-group col-md-12"></div>
 
-
-                  </div>
+                <div className="form-group col-md-12">
+                  <>
+                    <div className="contact-section">
+                      <div className="container">
+                        <div className="main-max-width">
+                          <div className="row">
+                            <div className="col-lg-6">
+                              <div className="content">
+                                <h2 className="fs-35 mb-30 gradient-style">
+                                  Get In Touch
+                                </h2>
+                                <p>
+                                  Whether you have questions about our services,
+                                  want to explore potential collaboration
+                                  opportunities,
+                                </p>
+                                <div className="contact-form">
+                                  <form action="#">
+                                    <div className="row">
+                                      <div className="col-6">
+                                        <div className="form-group mb-15">
+                                          <label className="label-style">
+                                            Fast Name
+                                          </label>
+                                          <input
+                                            type="text"
+                                            placeholder="Fast Name"
+                                            className="bg-white input-style border-style w-100 h-60"
+                                          />
+                                        </div>
+                                      </div>
+                                      <div className="col-6">
+                                        <div className="form-group mb-15">
+                                          <label className="label-style">
+                                            Last Name
+                                          </label>
+                                          <input
+                                            type="text"
+                                            placeholder="Last Name"
+                                            className="bg-white input-style border-style w-100 h-60"
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div className="form-group mb-15">
+                                      <label className="label-style">
+                                        Your email
+                                      </label>
+                                      <input
+                                        type="email"
+                                        placeholder="Your email"
+                                        className="bg-white input-style border-style w-100 h-60"
+                                      />
+                                    </div>
+                                    <div className="form-group mb-15">
+                                      <label className="label-style">
+                                        Message
+                                      </label>
+                                      <textarea
+                                        name="msg"
+                                        id="msg"
+                                        cols={30}
+                                        rows={5}
+                                        className="bg-white input-style border-style w-100"
+                                        placeholder="Your comments here"
+                                        defaultValue={""}
+                                      />
+                                    </div>
+                                    <button className="btn style-one box-shadow-1">
+                                      Send Message
+                                    </button>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="col-lg-6">
+                              <div className="contact-info">
+                                <h4 className="fs-20 text-title">Contact Us</h4>
+                                <div className="content mb-40">
+                                  <div className="info-item d-flex align-items-center">
+                                    <div className="icon">
+                                      <img
+                                        src="assets/img/icon/location-icon-cont.svg"
+                                        alt="icon"
+                                      />
+                                    </div>
+                                    <div className="text">
+                                      <h5 className="fs-16">Address</h5>
+                                      <p className="mb-0">
+                                        2972 Westheimer Rd. Santa Ana, Illinois
+                                        85486{" "}
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div className="info-item d-flex align-items-center">
+                                    <div className="icon">
+                                      <img
+                                        src="assets/img/icon/mail-icon-cont.svg"
+                                        alt="icon"
+                                      />
+                                    </div>
+                                    <div className="text">
+                                      <h5 className="fs-16">Email</h5>
+                                      <a href="mailto:Info123456@gmail.com">
+                                        Info123456@gmail.com
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div className="info-item d-flex align-items-center">
+                                    <div className="icon">
+                                      <img
+                                        src="assets/img/icon/phone-icon-cont.svg"
+                                        alt="icon"
+                                      />
+                                    </div>
+                                    <div className="text">
+                                      <h5 className="fs-16">Phone</h5>
+                                      <a href="tel:123456789">+123 456 789</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="social-profile d-flex align-items-center">
+                                  <span className="fs-16">Follow Us:</span>
+                                  <ul className="list-unstyle d-flex">
+                                    <li>
+                                      <a
+                                        href="https://www.fb.com"
+                                        target="_blank"
+                                      >
+                                        <i className="ri-facebook-fill" />
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a
+                                        href="https://www.twitter.com"
+                                        target="_blank"
+                                      >
+                                        <i className="ri-twitter-x-fill" />
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a
+                                        href="https://www.instagram.com"
+                                        target="_blank"
+                                      >
+                                        <i className="ri-instagram-line" />
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a
+                                        href="https://www.linkedin.com"
+                                        target="_blank"
+                                      >
+                                        <i className="ri-linkedin-fill" />
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="map-loc pb-100">
+                      <div className="container-fluid g-0">
+                        <div className="office-map">
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8385385572983!2d144.95358331584498!3d-37.81725074201705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4dd5a05d97%3A0x3e64f855a564844d!2s121%20King%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sbd!4v1612419490850!5m2!1sen!2sbd"></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </>
                 </div>
               </div>
 
-              
-              
-              {/* <h5>More templates</h5>
               <hr />
-              <div className="row">
-                <div className="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                  <div className="card rounded-0 p-0 shadow-sm">
-                    <img
-                      src="https://user-images.githubusercontent.com/25878302/58369568-a49b2480-7efc-11e9-9ca9-2be44afacda1.png"
-                      className="card-img-top rounded-0"
-                      alt="Angular pro sidebar"
-                    />
-                    <div className="card-body text-center">
-                      <h6 className="card-title">Angular Pro Sidebar</h6>
-                      <a
-                        href="https://github.com/azouaoui-med/angular-pro-sidebar"
-                        target="_blank"
-                        className="btn btn-primary btn-sm"
-                      >
-                        Github
-                      </a>
-                      <a
-                        href="https://azouaoui-med.github.io/angular-pro-sidebar/demo/"
-                        target="_blank"
-                        className="btn btn-success btn-sm"
-                      >
-                        Preview
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                  <div className="card rounded-0 p-0 shadow-sm">
-                    <img
-                      src="https://user-images.githubusercontent.com/25878302/58369258-33f20900-7ef8-11e9-8ff3-b277cb7ed7b4.PNG"
-                      className="card-img-top rounded-0"
-                      alt="Angular pro sidebar"
-                    />
-                    <div className="card-body text-center">
-                      <h6 className="card-title">Angular Dashboard</h6>
-                      <a
-                        href="https://github.com/azouaoui-med/lightning-admin-angular"
-                        target="_blank"
-                        className="btn btn-primary btn-sm"
-                      >
-                        Github
-                      </a>
-                      <a
-                        href="https://azouaoui-med.github.io/lightning-admin-angular/demo/"
-                        target="_blank"
-                        className="btn btn-success btn-sm"
-                      >
-                        Preview
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
-              <hr />
-              {/* <footer className="text-center">
-                <div className="mb-2">
-                  <small>
-                    © 2020 made with{" "}
-                    <i className="fa fa-heart" style={{ color: "red" }} /> by -{" "}
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://azouaoui.netlify.com"
-                    >
-                      Mohamed Azouaoui
-                    </a>
-                  </small>
-                </div>
-                <div>
-                  <a href="https://github.com/azouaoui-med" target="_blank">
-                    <img
-                      alt="GitHub followers"
-                      src="https://img.shields.io/github/followers/azouaoui-med?label=github&style=social"
-                    />
-                  </a>
-                  <a href="https://twitter.com/azouaoui_med" target="_blank">
-                    <img
-                      alt="Twitter Follow"
-                      src="https://img.shields.io/twitter/follow/azouaoui_med?label=twitter&style=social"
-                    />
-                  </a>
-                </div>
-              </footer> */}
             </div>
           </main>
           {/* page-content" */}

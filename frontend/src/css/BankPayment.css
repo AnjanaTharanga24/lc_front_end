@@ -1,0 +1,25 @@
+.payment-card {
+    height: 100px;
+    background-color: #e6e6ff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    border-radius: 0px 40px 10px 40px;
+  }
+  
+  .payment-card:hover {
+    background-color:#ccccff;
+  }
+  
+  .payment-icon {
+    font-size: 2rem;
+    margin-right: 10px;
+  }
+  
+  .payment-text {
+    font-size: 1.2rem;
+  }
+
+ 
