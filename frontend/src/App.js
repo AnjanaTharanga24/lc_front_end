@@ -11,6 +11,8 @@ import Test from "./pages/Test";
 import SignIn from "./pages/SignIn";
 import New from "./pages/New";
 import ParentDashboard from "./pages/ParentDashboard";
+import Children from "./pages/Children";
+import BankPayment from "./pages/BankPayment";
 
 
 function App() {
@@ -26,7 +28,15 @@ function App() {
         <Route path="/test" element={<Test/>}/>
         <Route path="/signin" element={<SignIn/>}/>
         <Route path="/new" element={<New/>}/>
-        <Route path="/parent-dashboard" element={<ParentDashboard/>}/>
+        <Route path="/parent-dashboard" element={ <ParentDashboard />}/>
+        <Route path="/children" element={ <Children />}/>
+        <Route path="/bank-payment" element={ <BankPayment />}/>
+
+
+      
+
+        
+
 
 
 
