@@ -1,16 +1,18 @@
 .payment-card {
-    height: 100px;
-    background-color: #e6e6ff;
+    height: 85px;
+    background-color:#ff7510;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease;
     border-radius: 0px 40px 10px 40px;
+    color: white;
   }
   
   .payment-card:hover {
-    background-color:#ccccff;
+    background-color:#573bff;
+    color: aliceblue;
   }
   
   .payment-icon {

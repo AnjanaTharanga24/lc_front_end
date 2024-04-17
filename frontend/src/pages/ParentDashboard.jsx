@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../css/parentSidebar.css";
 import { Link } from "react-router-dom";
 export default function ParentDashboard() {
@@ -35,14 +35,18 @@ export default function ParentDashboard() {
           </a>
           <nav id="sidebar" className="sidebar-wrapper">
             <div className="sidebar-content">
+
               <div className="sidebar-brand">
+
+                <Link to="/">
                 <img
-                href="/home"
+                  href=""
                   className="logo-light "
                   src="assets/img/logo/ls.png"
                   alt="logo"
                   style={{ width: "200px" }}
                 />
+                </Link>
                 <div
                   id="close-sidebar"
                   onClick={closeSidebar}
@@ -75,33 +79,9 @@ export default function ParentDashboard() {
                     <a href="/children" onClick={() => toggleDropdown(1)}>
                       <i className="fa fa-tachometer-alt bg-light" />
                       <span>Children</span>
-                      <span className="badge badge-pill badge-warning">
-                        New
-                      </span>
+                      
                     </a>
-
-                    <div
-                      className={`sidebar-submenu ${
-                        activeDropdown === 1 ? "active" : ""
-                      }`}
-                    >
-                      <ul>
-                        <li>
-                          <a href="#">
-                            Dashboard 1
-                            <span className="badge badge-pill badge-success">
-                              Pro
-                            </span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">Dashboard 2</a>
-                        </li>
-                        <li>
-                          <a href="#">Dashboard 3</a>
-                        </li>
-                      </ul>
-                    </div>
+                    
                   </li>
                   <li className="sidebar-dropdown">
                     <a href="/bank-payment">
@@ -109,66 +89,25 @@ export default function ParentDashboard() {
                       <span>Bank Payment</span>
                       <span className="badge badge-pill badge-danger">3</span>
                     </a>
-                    <div className="sidebar-submenu">
-                      <ul>
-                        <li>
-                          <a href="#">Products</a>
-                        </li>
-                        <li>
-                          <a href="#">Orders</a>
-                        </li>
-                        <li>
-                          <a href="#">Credit cart</a>
-                        </li>
-                      </ul>
-                    </div>
+                   
                   </li>
                   <li className="sidebar-dropdown">
-                    <a href="#">
+                    <a href="/online-bank">
                       <i className="far fa-gem bg-light" />
                       <span>Online Bank</span>
+                      <span className="badge badge-pill badge-danger">3</span>
                     </a>
-                    <div className="sidebar-submenu">
-                      <ul>
-                        <li>
-                          <a href="#">General</a>
-                        </li>
-                        <li>
-                          <a href="#">Panels</a>
-                        </li>
-                        <li>
-                          <a href="#">Tables</a>
-                        </li>
-                        <li>
-                          <a href="#">Icons</a>
-                        </li>
-                        <li>
-                          <a href="#">Forms</a>
-                        </li>
-                      </ul>
-                    </div>
+                   
                   </li>
                   <li className="sidebar-dropdown">
-                    <a href="#">
+                    <a href="/my-qr">
                       <i className="fa fa-chart-line bg-light" />
                       <span>My QR</span>
+                      <span className="badge badge-pill badge-warning">
+                        New
+                      </span>
                     </a>
-                    <div className="sidebar-submenu">
-                      <ul>
-                        <li>
-                          <a href="#">Pie chart</a>
-                        </li>
-                        <li>
-                          <a href="#">Line chart</a>
-                        </li>
-                        <li>
-                          <a href="#">Bar chart</a>
-                        </li>
-                        <li>
-                          <a href="#">Histogram</a>
-                        </li>
-                      </ul>
-                    </div>
+                   
                   </li>
                   <li className="sidebar-dropdown">
                     <a href="#">
@@ -212,6 +151,7 @@ export default function ParentDashboard() {
               {/* sidebar-menu  */}
             </div>
             {/* sidebar-content  */}
+            
             <div className="sidebar-footer">
               <a href="#">
                 <i className="fa fa-bell" />
@@ -236,187 +176,507 @@ export default function ParentDashboard() {
           </nav>
 
           {/* sidebar-wrapper  */}
-          <main className="page-content " style={{ background: "#f2f2f2" }}>
+          <main className="page-content " style={{ background: "white" }}>
             <div className="container-fluid">
               <h2>Parent Dashboard</h2>
               <hr />
 
-              <div className="row">
-                <div className="form-group col-md-12"></div>
+              <div className="row mb-4">
+                {/* <div className="form-group col-md-6"></div>
 
                 <div className="form-group col-md-12">
-                  <>
-                    <div className="contact-section">
-                      <div className="container">
-                        <div className="main-max-width">
-                          <div className="row">
-                            <div className="col-lg-6">
-                              <div className="content">
-                                <h2 className="fs-35 mb-30 gradient-style">
-                                  Get In Touch
-                                </h2>
-                                <p>
-                                  Whether you have questions about our services,
-                                  want to explore potential collaboration
-                                  opportunities,
-                                </p>
-                                <div className="contact-form">
-                                  <form action="#">
-                                    <div className="row">
-                                      <div className="col-6">
-                                        <div className="form-group mb-15">
-                                          <label className="label-style">
-                                            Fast Name
-                                          </label>
-                                          <input
-                                            type="text"
-                                            placeholder="Fast Name"
-                                            className="bg-white input-style border-style w-100 h-60"
-                                          />
-                                        </div>
-                                      </div>
-                                      <div className="col-6">
-                                        <div className="form-group mb-15">
-                                          <label className="label-style">
-                                            Last Name
-                                          </label>
-                                          <input
-                                            type="text"
-                                            placeholder="Last Name"
-                                            className="bg-white input-style border-style w-100 h-60"
-                                          />
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div className="form-group mb-15">
-                                      <label className="label-style">
-                                        Your email
-                                      </label>
-                                      <input
-                                        type="email"
-                                        placeholder="Your email"
-                                        className="bg-white input-style border-style w-100 h-60"
-                                      />
-                                    </div>
-                                    <div className="form-group mb-15">
-                                      <label className="label-style">
-                                        Message
-                                      </label>
-                                      <textarea
-                                        name="msg"
-                                        id="msg"
-                                        cols={30}
-                                        rows={5}
-                                        className="bg-white input-style border-style w-100"
-                                        placeholder="Your comments here"
-                                        defaultValue={""}
-                                      />
-                                    </div>
-                                    <button className="btn style-one box-shadow-1">
-                                      Send Message
-                                    </button>
-                                  </form>
-                                </div>
+                  <div
+                    className="card"
+                    role="alert"
+                    style={{ height: "200px" }}
+                  ></div>
+                </div> */}
+
+<div className="faq-section ptb-100">
+  <div className="container">
+    <div className="main-max-width">
+      <div className="section-title mb-50 text-center">
+        <h4 className="sub-title mb-25"># Benefits</h4>
+        <h2 className="mb-0 fs-35">A Few Frequently Asked questions</h2>
+      </div>
+      <div className="row">
+        <div className="col-lg-6 col-md-6">
+          <div className="faq-content">
+            <div className="accordion faq" id="faqExa">
+              <div className="accordion-item">
+                <h2 className="accordion-header">
+                  <button
+                    className="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqSix"
+                  >
+                    What services does your consulting firm offer?
+                  </button>
+                </h2>
+                <div
+                  id="faqSix"
+                  className="accordion-collapse collapse show"
+                  data-bs-parent="#faqExa"
+                >
+                  <div className="accordion-body">
+                    <p>
+                      Our consulting firm specializes in brief description of
+                      your main services or areas of expertise. From strategic
+                      planning to we provide tailored solutions to meet the
+                      unique needs of our clients.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item">
+                <h2 className="accordion-header">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqSaven"
+                  >
+                    How can I request a consultation?
+                  </button>
+                </h2>
+                <div
+                  id="faqSaven"
+                  className="accordion-collapse collapse"
+                  data-bs-parent="#faqExa"
+                >
+                  <div className="accordion-body">
+                    <p>
+                      Our consulting firm specializes in brief description of
+                      your main services or areas of expertise. From strategic
+                      planning to we provide tailored solutions to meet the
+                      unique needs of our clients.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item">
+                <h2 className="accordion-header">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqEight"
+                  >
+                    What industries do you serve?
+                  </button>
+                </h2>
+                <div
+                  id="faqEight"
+                  className="accordion-collapse collapse"
+                  data-bs-parent="#faqExa"
+                >
+                  <div className="accordion-body">
+                    <p>
+                      Our consulting firm specializes in brief description of
+                      your main services or areas of expertise. From strategic
+                      planning to we provide tailored solutions to meet the
+                      unique needs of our clients.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item">
+                <h2 className="accordion-header">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqNine"
+                  >
+                    How is your consulting approach unique?
+                  </button>
+                </h2>
+                <div
+                  id="faqNine"
+                  className="accordion-collapse collapse"
+                  data-bs-parent="#faqExa"
+                >
+                  <div className="accordion-body">
+                    <p>
+                      Our consulting firm specializes in brief description of
+                      your main services or areas of expertise. From strategic
+                      planning to we provide tailored solutions to meet the
+                      unique needs of our clients.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item">
+                <h2 className="accordion-header">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqTen"
+                  >
+                    How do you ensure confidentiality?
+                  </button>
+                </h2>
+                <div
+                  id="faqTen"
+                  className="accordion-collapse collapse"
+                  data-bs-parent="#faqExa"
+                >
+                  <div className="accordion-body">
+                    <p>
+                      Our consulting firm specializes in brief description of
+                      your main services or areas of expertise. From strategic
+                      planning to we provide tailored solutions to meet the
+                      unique needs of our clients.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-6 col-md-6">
+          <div className="faq-content">
+            <div className="accordion faq" id="faqExaTow">
+              <div className="accordion-item">
+                <h2 className="accordion-header">
+                  <button
+                    className="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqOne"
+                  >
+                    What services does your consulting firm offer?
+                  </button>
+                </h2>
+                <div
+                  id="faqOne"
+                  className="accordion-collapse collapse show"
+                  data-bs-parent="#faqExaTow"
+                >
+                  <div className="accordion-body">
+                    <p>
+                      Our consulting firm specializes in brief description of
+                      your main services or areas of expertise. From strategic
+                      planning to we provide tailored solutions to meet the
+                      unique needs of our clients.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item">
+                <h2 className="accordion-header">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqTwo"
+                  >
+                    How can I request a consultation?
+                  </button>
+                </h2>
+                <div
+                  id="faqTwo"
+                  className="accordion-collapse collapse"
+                  data-bs-parent="#faqExaTow"
+                >
+                  <div className="accordion-body">
+                    <p>
+                      Our consulting firm specializes in brief description of
+                      your main services or areas of expertise. From strategic
+                      planning to we provide tailored solutions to meet the
+                      unique needs of our clients.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item">
+                <h2 className="accordion-header">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqThree"
+                  >
+                    What industries do you serve?
+                  </button>
+                </h2>
+                <div
+                  id="faqThree"
+                  className="accordion-collapse collapse"
+                  data-bs-parent="#faqExaTow"
+                >
+                  <div className="accordion-body">
+                    <p>
+                      Our consulting firm specializes in brief description of
+                      your main services or areas of expertise. From strategic
+                      planning to we provide tailored solutions to meet the
+                      unique needs of our clients.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item">
+                <h2 className="accordion-header">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqFour"
+                  >
+                    How is your consulting approach unique?
+                  </button>
+                </h2>
+                <div
+                  id="faqFour"
+                  className="accordion-collapse collapse"
+                  data-bs-parent="#faqExaTow"
+                >
+                  <div className="accordion-body">
+                    <p>
+                      Our consulting firm specializes in brief description of
+                      your main services or areas of expertise. From strategic
+                      planning to we provide tailored solutions to meet the
+                      unique needs of our clients.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item">
+                <h2 className="accordion-header">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqFive"
+                  >
+                    How do you ensure confidentiality?
+                  </button>
+                </h2>
+                <div
+                  id="faqFive"
+                  className="accordion-collapse collapse"
+                  data-bs-parent="#faqExaTow"
+                >
+                  <div className="accordion-body">
+                    <p>
+                      Our consulting firm specializes in brief description of
+                      your main services or areas of expertise. From strategic
+                      planning to we provide tailored solutions to meet the
+                      unique needs of our clients.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+                {/* <div className="card" style={{ height: "auto" }}>
+                    <div
+                      className="card mb-4 shadow-lg mt-5  bg-light rounded"
+                      style={{
+                        height: "380px",
+                        width: "1000px",
+                        marginTop: "30px",
+                        marginLeft: "100px",
+                      }}
+                    >
+                      <div className="d-flex">
+                        <div
+                          className="card p-5"
+                          style={{
+                            height: "280px",
+                            width: "220px",
+                            marginTop: "20px",
+                            marginLeft: "30px",
+                          }}
+                        >
+                          <img
+                            src="assets/img/all-img/child2.jpeg"
+                            style={{ height: "600px", width: "800px" }}
+                          ></img>
+                        </div>
+                        <div
+                          className="card p-5"
+                          style={{
+                            height: "280px",
+                            width: "670px",
+                            marginTop: "20px",
+                            marginLeft: "30px",
+                          }}
+                        >
+                          <div className="fs-4">
+                            <div className="d-flex">
+                              <div className="" style={{ width: "120px" }}>
+                                <label>Name </label>
+                                <label style={{ marginLeft: "40px" }}>:</label>
+                              </div>
+                              <div style={{ marginLeft: "10px" }}>
+                                <span>Anjana tharanga samaranayake</span>
                               </div>
                             </div>
-                            <div className="col-lg-6">
-                              <div className="contact-info">
-                                <h4 className="fs-20 text-title">Contact Us</h4>
-                                <div className="content mb-40">
-                                  <div className="info-item d-flex align-items-center">
-                                    <div className="icon">
-                                      <img
-                                        src="assets/img/icon/location-icon-cont.svg"
-                                        alt="icon"
-                                      />
-                                    </div>
-                                    <div className="text">
-                                      <h5 className="fs-16">Address</h5>
-                                      <p className="mb-0">
-                                        2972 Westheimer Rd. Santa Ana, Illinois
-                                        85486{" "}
-                                      </p>
-                                    </div>
-                                  </div>
-                                  <div className="info-item d-flex align-items-center">
-                                    <div className="icon">
-                                      <img
-                                        src="assets/img/icon/mail-icon-cont.svg"
-                                        alt="icon"
-                                      />
-                                    </div>
-                                    <div className="text">
-                                      <h5 className="fs-16">Email</h5>
-                                      <a href="mailto:Info123456@gmail.com">
-                                        Info123456@gmail.com
-                                      </a>
-                                    </div>
-                                  </div>
-                                  <div className="info-item d-flex align-items-center">
-                                    <div className="icon">
-                                      <img
-                                        src="assets/img/icon/phone-icon-cont.svg"
-                                        alt="icon"
-                                      />
-                                    </div>
-                                    <div className="text">
-                                      <h5 className="fs-16">Phone</h5>
-                                      <a href="tel:123456789">+123 456 789</a>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="social-profile d-flex align-items-center">
-                                  <span className="fs-16">Follow Us:</span>
-                                  <ul className="list-unstyle d-flex">
-                                    <li>
-                                      <a
-                                        href="https://www.fb.com"
-                                        target="_blank"
-                                      >
-                                        <i className="ri-facebook-fill" />
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a
-                                        href="https://www.twitter.com"
-                                        target="_blank"
-                                      >
-                                        <i className="ri-twitter-x-fill" />
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a
-                                        href="https://www.instagram.com"
-                                        target="_blank"
-                                      >
-                                        <i className="ri-instagram-line" />
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a
-                                        href="https://www.linkedin.com"
-                                        target="_blank"
-                                      >
-                                        <i className="ri-linkedin-fill" />
-                                      </a>
-                                    </li>
-                                  </ul>
-                                </div>
+
+                            <div className="d-flex">
+                              <div className="" style={{ width: "120px" }}>
+                                <label>Age </label>
+                                <label style={{ marginLeft: "60px" }}>:</label>
+                              </div>
+                              <div style={{ marginLeft: "10px" }}>
+                                <span>24</span>
+                              </div>
+                            </div>
+                            <div className="d-flex">
+                              <div className="" style={{ width: "120px" }}>
+                                <label>DOB </label>
+                                <label style={{ marginLeft: "53px" }}>:</label>
+                              </div>
+                              <div style={{ marginLeft: "10px" }}>
+                                <span>24/08/2000</span>
+                              </div>
+                            </div>
+                            <div className="d-flex">
+                              <div className="" style={{ width: "120px" }}>
+                                <label>Course </label>
+                                <label style={{ marginLeft: "40px" }}>:</label>
+                              </div>
+                              <div style={{ marginLeft: "10px" }}>
+                                <span>English</span>
+                              </div>
+                            </div>
+
+                            <div className="d-flex">
+                              <div className="" style={{ width: "120px" }}>
+                                <label>Intake </label>
+                                <label style={{ marginLeft: "40px" }}>:</label>
+                              </div>
+                              <div style={{ marginLeft: "10px" }}>
+                                <span> June intake</span>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="map-loc pb-100">
-                      <div className="container-fluid g-0">
-                        <div className="office-map">
-                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8385385572983!2d144.95358331584498!3d-37.81725074201705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4dd5a05d97%3A0x3e64f855a564844d!2s121%20King%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sbd!4v1612419490850!5m2!1sen!2sbd"></iframe>
-                        </div>
+
+                      <div>
+                        <button
+                          className="mt-3 btn btn-success fs-5"
+                          style={{
+                            height: "45px",
+                            width: "170px",
+                            marginLeft: "780px",
+                          }}
+                        >
+                          <FontAwesomeIcon
+                            icon={faCheck}
+                            style={{ marginRight: "10px" }}
+                          />
+                          <label className="" style={{ marginLeft: "10px" }}>
+                            Approved!
+                          </label>
+                        </button>
                       </div>
                     </div>
-                  </>
-                </div>
+
+                    <div
+                      className="card mb-4 shadow-lg mt-5  bg-light rounded"
+                      style={{
+                        height: "380px",
+                        width: "1000px",
+                        marginTop: "30px",
+                        marginLeft: "100px",
+                      }}
+                    >
+                      <div className="d-flex">
+                        <div
+                          className="card p-5"
+                          style={{
+                            height: "280px",
+                            width: "220px",
+                            marginTop: "20px",
+                            marginLeft: "30px",
+                          }}
+                        >
+                          <img
+                            src="assets/img/all-img/child2.jpeg"
+                            style={{ height: "600px", width: "800px" }}
+                          ></img>
+                        </div>
+                        <div
+                          className="card p-5"
+                          style={{
+                            height: "280px",
+                            width: "670px",
+                            marginTop: "20px",
+                            marginLeft: "30px",
+                          }}
+                        >
+                          <div className="fs-4">
+                            <div className="d-flex">
+                              <div className="" style={{ width: "120px" }}>
+                                <label>Name </label>
+                                <label style={{ marginLeft: "40px" }}>:</label>
+                              </div>
+                              <div style={{ marginLeft: "10px" }}>
+                                <span>Anjana tharanga samaranayake</span>
+                              </div>
+                            </div>
+
+                            <div className="d-flex">
+                              <div className="" style={{ width: "120px" }}>
+                                <label>Age </label>
+                                <label style={{ marginLeft: "60px" }}>:</label>
+                              </div>
+                              <div style={{ marginLeft: "10px" }}>
+                                <span>24</span>
+                              </div>
+                            </div>
+                            <div className="d-flex">
+                              <div className="" style={{ width: "120px" }}>
+                                <label>DOB </label>
+                                <label style={{ marginLeft: "53px" }}>:</label>
+                              </div>
+                              <div style={{ marginLeft: "10px" }}>
+                                <span>24/08/2000</span>
+                              </div>
+                            </div>
+                            <div className="d-flex">
+                              <div className="" style={{ width: "120px" }}>
+                                <label>Course </label>
+                                <label style={{ marginLeft: "40px" }}>:</label>
+                              </div>
+                              <div style={{ marginLeft: "10px" }}>
+                                <span>English</span>
+                              </div>
+                            </div>
+
+                            <div className="d-flex">
+                              <div className="" style={{ width: "120px" }}>
+                                <label>Intake </label>
+                                <label style={{ marginLeft: "40px" }}>:</label>
+                              </div>
+                              <div style={{ marginLeft: "10px" }}>
+                                <span> June intake</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div>
+                      <button className="mt-3 btn btn-warning fs-5" style={{ height: "45px", width: "170px", marginLeft: "780px" }}>
+    <FontAwesomeIcon icon={faHourglass} style={{ marginRight: "10px",color:"white" }} />
+    <label className="text-white" style={{ marginLeft: "10px" }}>Pending!</label>
+</button>
+                      </div>
+                    </div>
+                  </div> */}
               </div>
 
               <hr />

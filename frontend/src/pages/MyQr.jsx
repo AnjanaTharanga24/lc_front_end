@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "../css/parentSidebar.css";
 import { Link } from "react-router-dom";
-export default function ParentDashboard() {
+
+export default function MyQr() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [activeDropdown, setActiveDropdown] = useState(null);
 
@@ -16,24 +16,20 @@ export default function ParentDashboard() {
   const closeSidebar = () => {
     setSidebarOpen(false);
   };
-
   return (
-    <div>
-      <>
-        <div
-          className={`page-wrapper chiller-theme ${
-            sidebarOpen ? "toggled" : ""
-          }`}
+    <>
+      <div
+        className={`page-wrapper chiller-theme ${sidebarOpen ? "toggled" : ""}`}
+      >
+        <a
+          id="show-sidebar"
+          className="btn btn-sm btn-dark"
+          href="#"
+          onClick={toggleSidebar}
         >
-          <a
-            id="show-sidebar"
-            className="btn btn-sm btn-dark"
-            href="#"
-            onClick={toggleSidebar}
-          >
-            <i className="fas fa-bars" />
-          </a>
-          <nav id="sidebar" className="sidebar-wrapper">
+          <i className="fas fa-bars" />
+        </a>
+        <nav id="sidebar" className="sidebar-wrapper">
             <div className="sidebar-content">
 
               <div className="sidebar-brand">
@@ -151,6 +147,7 @@ export default function ParentDashboard() {
               {/* sidebar-menu  */}
             </div>
             {/* sidebar-content  */}
+            
             <div className="sidebar-footer">
               <a href="#">
                 <i className="fa fa-bell" />
@@ -174,18 +171,27 @@ export default function ParentDashboard() {
             </div>
           </nav>
 
-          {/* sidebar-wrapper  */}
-          <main className="page-content " style={{ background: "#f2f2f2" }}>
-            <div className="container-fluid">
-             
+        {/* sidebar-wrapper  */}
+        <main className="page-content " style={{ background: "white" }}>
+          <div className="container-fluid">
+            <h2>My QR</h2>
+            <hr />
 
-              <hr />
+            <div className="row mb-4">
+              <div >
+                <img
+                  src="assets/img/all-img/qr1.jpg"
+                  style={{ height: "550px", width: "900px",marginLeft:"80px" }}
+                ></img>
+              </div>
             </div>
-          </main>
-          {/* page-content" */}
-        </div>
-        {/* page-wrapper */}
-      </>
-    </div>
+
+            <hr />
+          </div>
+        </main>
+        {/* page-content" */}
+      </div>
+      {/* page-wrapper */}
+    </>
   );
 }

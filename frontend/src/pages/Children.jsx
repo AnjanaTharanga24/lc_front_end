@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHourglass } from '@fortawesome/free-solid-svg-icons';
+import { Link } from "react-router-dom";
 
 
 export default function Children() {
@@ -38,14 +39,18 @@ export default function Children() {
             </a>
             <nav id="sidebar" className="sidebar-wrapper">
             <div className="sidebar-content">
+
               <div className="sidebar-brand">
+
+                <Link to="/">
                 <img
-                href="/home"
+                  href=""
                   className="logo-light "
                   src="assets/img/logo/ls.png"
                   alt="logo"
                   style={{ width: "200px" }}
                 />
+                </Link>
                 <div
                   id="close-sidebar"
                   onClick={closeSidebar}
@@ -78,33 +83,9 @@ export default function Children() {
                     <a href="/children" onClick={() => toggleDropdown(1)}>
                       <i className="fa fa-tachometer-alt bg-light" />
                       <span>Children</span>
-                      <span className="badge badge-pill badge-warning">
-                        New
-                      </span>
+                      
                     </a>
-
-                    <div
-                      className={`sidebar-submenu ${
-                        activeDropdown === 1 ? "active" : ""
-                      }`}
-                    >
-                      <ul>
-                        <li>
-                          <a href="#">
-                            Dashboard 1
-                            <span className="badge badge-pill badge-success">
-                              Pro
-                            </span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">Dashboard 2</a>
-                        </li>
-                        <li>
-                          <a href="#">Dashboard 3</a>
-                        </li>
-                      </ul>
-                    </div>
+                    
                   </li>
                   <li className="sidebar-dropdown">
                     <a href="/bank-payment">
@@ -112,66 +93,25 @@ export default function Children() {
                       <span>Bank Payment</span>
                       <span className="badge badge-pill badge-danger">3</span>
                     </a>
-                    <div className="sidebar-submenu">
-                      <ul>
-                        <li>
-                          <a href="#">Products</a>
-                        </li>
-                        <li>
-                          <a href="#">Orders</a>
-                        </li>
-                        <li>
-                          <a href="#">Credit cart</a>
-                        </li>
-                      </ul>
-                    </div>
+                   
                   </li>
                   <li className="sidebar-dropdown">
-                    <a href="#">
+                    <a href="/online-bank">
                       <i className="far fa-gem bg-light" />
                       <span>Online Bank</span>
+                      <span className="badge badge-pill badge-danger">3</span>
                     </a>
-                    <div className="sidebar-submenu">
-                      <ul>
-                        <li>
-                          <a href="#">General</a>
-                        </li>
-                        <li>
-                          <a href="#">Panels</a>
-                        </li>
-                        <li>
-                          <a href="#">Tables</a>
-                        </li>
-                        <li>
-                          <a href="#">Icons</a>
-                        </li>
-                        <li>
-                          <a href="#">Forms</a>
-                        </li>
-                      </ul>
-                    </div>
+                   
                   </li>
                   <li className="sidebar-dropdown">
-                    <a href="#">
+                    <a href="/my-qr">
                       <i className="fa fa-chart-line bg-light" />
                       <span>My QR</span>
+                      <span className="badge badge-pill badge-warning">
+                        New
+                      </span>
                     </a>
-                    <div className="sidebar-submenu">
-                      <ul>
-                        <li>
-                          <a href="#">Pie chart</a>
-                        </li>
-                        <li>
-                          <a href="#">Line chart</a>
-                        </li>
-                        <li>
-                          <a href="#">Bar chart</a>
-                        </li>
-                        <li>
-                          <a href="#">Histogram</a>
-                        </li>
-                      </ul>
-                    </div>
+                   
                   </li>
                   <li className="sidebar-dropdown">
                     <a href="#">
@@ -215,6 +155,7 @@ export default function Children() {
               {/* sidebar-menu  */}
             </div>
             {/* sidebar-content  */}
+            
             <div className="sidebar-footer">
               <a href="#">
                 <i className="fa fa-bell" />
@@ -239,23 +180,15 @@ export default function Children() {
           </nav>
 
             {/* sidebar-wrapper  */}
-            <main className="page-content " style={{ background: "#f2f2f2" }}>
+            <main className="page-content " style={{ background: "white" }}>
               <div className="container-fluid">
-                <h2>Parent Dashboard</h2>
+                <h2>Children</h2>
                 <hr />
 
                 <div className="row">
-                  {/* <div className="form-group col-md-6"></div>
+                 
 
-                <div className="form-group col-md-12">
-                  <div
-                    className="card"
-                    role="alert"
-                    style={{ height: "200px" }}
-                  ></div>
-                </div> */}
-
-                  <div className="card" style={{ height: "auto" }}>
+                  <div className="" style={{ height: "auto" }}>
                     <div
                       className="card mb-4 shadow-lg mt-5  bg-light rounded"
                       style={{

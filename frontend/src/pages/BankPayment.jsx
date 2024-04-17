@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoneyBillAlt, faHistory } from "@fortawesome/free-solid-svg-icons";
 import "../css/BankPayment.css";
+import { Link } from "react-router-dom";
 
 export default function BankPayment() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -105,221 +106,155 @@ const handleCheckboxChange = (month, isChecked, price, index) => {
                 <i className="fas fa-bars" />
               </a>
               <nav id="sidebar" className="sidebar-wrapper">
-                <div className="sidebar-content">
-                  <div className="sidebar-brand">
-                    <img
-                      className="logo-light "
-                      src="assets/img/logo/ls.png"
-                      alt="logo"
-                      style={{ width: "200px" }}
-                    />
-                    <div
-                      id="close-sidebar"
-                      onClick={closeSidebar}
-                      style={{ marginLeft: "10px" }}
-                    >
-                      <i className="fas fa-times" />
-                    </div>
-                  </div>
-                  <div className="sidebar-header">
-                    <div
-                      className="user-info"
-                      style={{ marginLeft: "30px", fontWeight: "bold" }}
-                    >
-                      <span className="user-name fs-4">Jhon Smith</span>
-                      <span
-                        className="user-role"
-                        style={{ marginLeft: "13px" }}
-                      >
-                        jhon@gmail.com
-                      </span>
-                      <span
-                        className="user-status"
-                        style={{ marginLeft: "15px" }}
-                      >
-                        +94774436594
-                      </span>
-                    </div>
-                  </div>
+            <div className="sidebar-content">
 
-                  <div className="sidebar-menu" style={{ fontSize: "17px" }}>
-                    <ul>
-                      <li className="header-menu">
-                        <span className="">General</span>
-                      </li>
-                      <li className="sidebar-dropdown">
-                        <a href="#" onClick={() => toggleDropdown(1)}>
-                          <i className="fa fa-tachometer-alt bg-light" />
-                          <span>Children</span>
-                          <span className="badge badge-pill badge-warning">
-                            New
-                          </span>
-                        </a>
-                        <div
-                          className={`sidebar-submenu ${
-                            activeDropdown === 1 ? "active" : ""
-                          }`}
-                        >
-                          <ul>
-                            <li>
-                              <a href="#">
-                                Dashboard 1
-                                <span className="badge badge-pill badge-success">
-                                  Pro
-                                </span>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#">Dashboard 2</a>
-                            </li>
-                            <li>
-                              <a href="#">Dashboard 3</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </li>
-                      <li className="sidebar-dropdown">
-                        <a href="#">
-                          <i className="fa fa-shopping-cart bg-light" />
-                          <span>Bank Payment</span>
-                          <span className="badge badge-pill badge-danger">
-                            3
-                          </span>
-                        </a>
-                        <div className="sidebar-submenu">
-                          <ul>
-                            <li>
-                              <a href="#">Products</a>
-                            </li>
-                            <li>
-                              <a href="#">Orders</a>
-                            </li>
-                            <li>
-                              <a href="#">Credit cart</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </li>
-                      <li className="sidebar-dropdown">
-                        <a href="#">
-                          <i className="far fa-gem bg-light" />
-                          <span>Online Bank</span>
-                        </a>
-                        <div className="sidebar-submenu">
-                          <ul>
-                            <li>
-                              <a href="#">General</a>
-                            </li>
-                            <li>
-                              <a href="#">Panels</a>
-                            </li>
-                            <li>
-                              <a href="#">Tables</a>
-                            </li>
-                            <li>
-                              <a href="#">Icons</a>
-                            </li>
-                            <li>
-                              <a href="#">Forms</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </li>
-                      <li className="sidebar-dropdown">
-                        <a href="#">
-                          <i className="fa fa-chart-line bg-light" />
-                          <span>My QR</span>
-                        </a>
-                        <div className="sidebar-submenu">
-                          <ul>
-                            <li>
-                              <a href="#">Pie chart</a>
-                            </li>
-                            <li>
-                              <a href="#">Line chart</a>
-                            </li>
-                            <li>
-                              <a href="#">Bar chart</a>
-                            </li>
-                            <li>
-                              <a href="#">Histogram</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </li>
-                      <li className="sidebar-dropdown">
-                        <a href="#">
-                          <i className="fa fa-globe bg-light" />
-                          <span>Maps</span>
-                        </a>
-                        <div className="sidebar-submenu">
-                          <ul>
-                            <li>
-                              <a href="#">Google maps</a>
-                            </li>
-                            <li>
-                              <a href="#">Open street map</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </li>
-                      <li className="header-menu">
-                        <span>Extra</span>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fa fa-book bg-light" />
-                          <span>Documentation</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fa fa-calendar bg-light" />
-                          <span>Calendar</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fa fa-folder bg-light" />
-                          <span>Examples</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  {/* sidebar-menu  */}
+              <div className="sidebar-brand">
+
+                <Link to="/">
+                <img
+                  href=""
+                  className="logo-light "
+                  src="assets/img/logo/ls.png"
+                  alt="logo"
+                  style={{ width: "200px" }}
+                />
+                </Link>
+                <div
+                  id="close-sidebar"
+                  onClick={closeSidebar}
+                  style={{ marginLeft: "10px" }}
+                >
+                  <i className="fas fa-times" />
                 </div>
-                {/* sidebar-content  */}
-                <div className="sidebar-footer">
-                  <a href="#">
-                    <i className="fa fa-bell" />
-                    <span className="badge badge-pill badge-warning notification">
-                      3
-                    </span>
-                  </a>
-                  <a href="#">
-                    <i className="fa fa-envelope" />
-                    <span className="badge badge-pill badge-success notification">
-                      7
-                    </span>
-                  </a>
-                  <a href="#">
-                    <i className="fa fa-cog" />
-                    <span className="badge-sonar" />
-                  </a>
-                  <a href="#">
-                    <i className="fa fa-power-off" />
-                  </a>
+              </div>
+              <div className="sidebar-header">
+                <div
+                  className="user-info"
+                  style={{ marginLeft: "30px", fontWeight: "bold" }}
+                >
+                  <span className="user-name fs-4">Jhon Smith</span>
+                  <span className="user-role" style={{ marginLeft: "13px" }}>
+                    jhon@gmail.com
+                  </span>
+                  <span className="user-status" style={{ marginLeft: "15px" }}>
+                    +94774436594
+                  </span>
                 </div>
-              </nav>
+              </div>
+
+              <div className="sidebar-menu" style={{ fontSize: "17px" }}>
+                <ul>
+                  <li className="header-menu">
+                    <span className="">General</span>
+                  </li>
+                  <li className="sidebar-dropdown">
+                    <a href="/children" onClick={() => toggleDropdown(1)}>
+                      <i className="fa fa-tachometer-alt bg-light" />
+                      <span>Children</span>
+                      
+                    </a>
+                    
+                  </li>
+                  <li className="sidebar-dropdown">
+                    <a href="/bank-payment">
+                      <i className="fa fa-shopping-cart bg-light" />
+                      <span>Bank Payment</span>
+                      <span className="badge badge-pill badge-danger">3</span>
+                    </a>
+                   
+                  </li>
+                  <li className="sidebar-dropdown">
+                    <a href="/online-bank">
+                      <i className="far fa-gem bg-light" />
+                      <span>Online Bank</span>
+                      <span className="badge badge-pill badge-danger">3</span>
+                    </a>
+                   
+                  </li>
+                  <li className="sidebar-dropdown">
+                    <a href="/my-qr">
+                      <i className="fa fa-chart-line bg-light" />
+                      <span>My QR</span>
+                      <span className="badge badge-pill badge-warning">
+                        New
+                      </span>
+                    </a>
+                   
+                  </li>
+                  <li className="sidebar-dropdown">
+                    <a href="#">
+                      <i className="fa fa-globe bg-light" />
+                      <span>Maps</span>
+                    </a>
+                    <div className="sidebar-submenu">
+                      <ul>
+                        <li>
+                          <a href="#">Google maps</a>
+                        </li>
+                        <li>
+                          <a href="#">Open street map</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li className="header-menu">
+                    <span>Extra</span>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i className="fa fa-book bg-light" />
+                      <span>Documentation</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i className="fa fa-calendar bg-light" />
+                      <span>Calendar</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i className="fa fa-folder bg-light" />
+                      <span>Examples</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              {/* sidebar-menu  */}
+            </div>
+            {/* sidebar-content  */}
+            
+            <div className="sidebar-footer">
+              <a href="#">
+                <i className="fa fa-bell" />
+                <span className="badge badge-pill badge-warning notification">
+                  3
+                </span>
+              </a>
+              <a href="#">
+                <i className="fa fa-envelope" />
+                <span className="badge badge-pill badge-success notification">
+                  7
+                </span>
+              </a>
+              <a href="#">
+                <i className="fa fa-cog" />
+                <span className="badge-sonar" />
+              </a>
+              <a href="#">
+                <i className="fa fa-power-off" />
+              </a>
+            </div>
+          </nav>
 
               {/* sidebar-wrapper  */}
-              <main className="page-content" style={{ background: "#f2f2f2" }}>
+              <main className="page-content" style={{ background: "white" }}>
                 <div className="container-fluid">
                   <h2>Bank Payment</h2>
                   <hr />
 
                   <div className="row">
-                    <div className="card" style={{ height: "auto" }}>
+                    <div className="" style={{ height: "auto" }}>
                       <div className="d-flex fs-4">
                         <div
                           className="card p-4 mt-3 payment-card"

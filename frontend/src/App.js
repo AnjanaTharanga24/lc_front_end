@@ -13,6 +13,8 @@ import New from "./pages/New";
 import ParentDashboard from "./pages/ParentDashboard";
 import Children from "./pages/Children";
 import BankPayment from "./pages/BankPayment";
+import MyQr from "./pages/MyQr";
+import OnlineBank from "./pages/OnlineBank";
 
 
 function App() {
@@ -31,6 +33,10 @@ function App() {
         <Route path="/parent-dashboard" element={ <ParentDashboard />}/>
         <Route path="/children" element={ <Children />}/>
         <Route path="/bank-payment" element={ <BankPayment />}/>
+        <Route path="/my-qr" element={ <MyQr/>}/>
+        <Route path="/online-bank" element={ <OnlineBank/>}/>
+
+
 
 
       
