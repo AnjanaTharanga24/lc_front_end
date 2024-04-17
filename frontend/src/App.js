@@ -25,7 +25,7 @@ function App() {
         <Route path="/speaking" element={<Speaking/>}/>
         <Route path="/reading" element={<Reading/>}/>
         <Route path="/register" element={<Register/>}/>
-        <Route path="/test" element={<Test/>}/>
+        {/* <Route path="/test" element={<Test/>}/> */}
         <Route path="/signin" element={<SignIn/>}/>
         <Route path="/new" element={<New/>}/>
         <Route path="/parent-dashboard" element={ <ParentDashboard />}/>

@@ -4,9 +4,12 @@ import { faMoneyBillAlt, faHistory } from "@fortawesome/free-solid-svg-icons";
 import "../css/BankPayment.css";
 
 export default function BankPayment() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [currentForm, setCurrentForm] = useState(1); // Initialize with pending payments
+  const [selectedMonths, setSelectedMonths] = useState([]);
+  const [totalPayment, setTotalPayment] = useState(0);
+  const [errors, setErrors] = useState(Array(12).fill(false)); // Array to track errors for each month
 
   useEffect(() => {
     // Load data related to pending payments when component mounts
@@ -33,6 +36,54 @@ export default function BankPayment() {
   // Function to handle click on Past Payment card
   const handlePastPaymentClick = () => {
     setCurrentForm(2); // Set current form to Form 2 (Past Payment)
+  };
+
+const handleCheckboxChange = (month, isChecked, price, index) => {
+  const lastSelectedMonthIndex = selectedMonths.length > 0 ? selectedMonths[selectedMonths.length - 1] : -1;
+
+  if (isChecked) {
+    if (lastSelectedMonthIndex !== -1 && index !== lastSelectedMonthIndex + 1) {
+      // Display error if the selected month is not in order
+      setErrors((prevErrors) => prevErrors.map((error, i) => i === index ? true : error));
+    } else {
+      // Clear error and update selected months and total payment
+      setErrors((prevErrors) => prevErrors.map((error, i) => i === index ? false : error));
+      setSelectedMonths([...selectedMonths, index]);
+      setTotalPayment(totalPayment + price);
+    }
+  } else {
+    // If the checkbox is being unchecked, clear error for that month
+    setErrors((prevErrors) => prevErrors.map((error, i) => i === index ? false : error));
+    // Check if the unchecked checkbox is the last selected month
+    if (index === lastSelectedMonthIndex) {
+      // If unchecked checkbox was the last selected month, update selected months and total payment
+      setSelectedMonths(selectedMonths.filter((selectedMonth) => selectedMonth !== index));
+      setTotalPayment(totalPayment - price);
+    }
+  }
+};
+
+  
+  
+  
+  
+
+  const getMonthName = (index) => {
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+    return months[index];
   };
 
   return (
@@ -300,6 +351,22 @@ export default function BankPayment() {
                             Past Payment
                           </span>
                         </div>
+
+                        <div
+                          className=" error-field"
+                          style={{
+                            width: "400px",
+                            marginLeft: "150px",
+                            marginTop:"40px"
+                          }}
+                        >
+                          {/* Display errors */}
+                          {errors.includes(true) && (
+                            <div class="alert alert-danger " style={{fontSize:"15px"}} role="alert">
+                              You have not paid for the last month. Please complete the payment. !!!
+                          </div>
+                          )}
+                        </div>
                       </div>
 
                       <div>
@@ -309,491 +376,177 @@ export default function BankPayment() {
                             className="wizard-form card p-4 mt-3 mb-4"
                             style={{ height: "auto" }}
                           >
-                            {/* Form 1 content */}
                             <form>
-                              <div>
-                                <div className="d-flex justify-content-between mb-3 ">
-                                  <div
-                                    className="card "
-                                    style={{ height: "100px", width: "250px" }}
-                                  >
-                                    <div className=" p-3  ">
-                                      <div className="fs-5">
-                                        <input
-                                          className=""
-                                          type="checkbox"
-                                          style={{
-                                            marginTop: "10px",
-                                            width: "20px",
-                                            height: "20px",
-                                          }}
-                                        />
-                                        <label
-                                          style={{
-                                            marginLeft: "20px",
-                                            fontSize: "20px",
-                                          }}
-                                        >
-                                          January
-                                        </label>
-                                        <div className="d-flex justify-content-between ">
-                                          <label
-                                            className=""
-                                            style={{ fontSize: "15px" }}
-                                          >
-                                            2 Child Package
-                                          </label>
-
-                                          <label style={{ marginTop: "-4px" }}>
-                                            €28
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div
-                                    className="card "
-                                    style={{ height: "100px", width: "250px" }}
-                                  >
-                                    <div className=" p-3  ">
-                                      <div className="fs-5">
-                                        <input
-                                          className=""
-                                          type="checkbox"
-                                          style={{
-                                            marginTop: "10px",
-                                            width: "20px",
-                                            height: "20px",
-                                          }}
-                                        />
-                                        <label
-                                          style={{
-                                            marginLeft: "20px",
-                                            fontSize: "20px",
-                                          }}
-                                        >
-                                          February
-                                        </label>
-                                        <div className="d-flex justify-content-between ">
-                                          <label
-                                            className=""
-                                            style={{ fontSize: "15px" }}
-                                          >
-                                            2 Child Package
-                                          </label>
-
-                                          <label style={{ marginTop: "-4px" }}>
-                                            €28
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div
-                                    className="card "
-                                    style={{ height: "100px", width: "250px" }}
-                                  >
-                                    <div className=" p-3  ">
-                                      <div className="fs-5">
-                                        <input
-                                          className=""
-                                          type="checkbox"
-                                          style={{
-                                            marginTop: "10px",
-                                            width: "20px",
-                                            height: "20px",
-                                          }}
-                                        />
-                                        <label
-                                          style={{
-                                            marginLeft: "20px",
-                                            fontSize: "20px",
-                                          }}
-                                        >
-                                          March
-                                        </label>
-                                        <div className="d-flex justify-content-between ">
-                                          <label
-                                            className=""
-                                            style={{ fontSize: "15px" }}
-                                          >
-                                            2 Child Package
-                                          </label>
-
-                                          <label style={{ marginTop: "-4px" }}>
-                                            €28
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div
-                                    className="card "
-                                    style={{ height: "100px", width: "250px" }}
-                                  >
-                                    <div className=" p-3  ">
-                                      <div className="fs-5">
-                                        <input
-                                          className=""
-                                          type="checkbox"
-                                          style={{
-                                            marginTop: "10px",
-                                            width: "20px",
-                                            height: "20px",
-                                          }}
-                                        />
-                                        <label
-                                          style={{
-                                            marginLeft: "20px",
-                                            fontSize: "20px",
-                                          }}
-                                        >
-                                          April
-                                        </label>
-                                        <div className="d-flex justify-content-between ">
-                                          <label
-                                            className=""
-                                            style={{ fontSize: "15px" }}
-                                          >
-                                            2 Child Package
-                                          </label>
-
-                                          <label style={{ marginTop: "-4px" }}>
-                                            €28
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-
+                              {/* Form 1 content */}
+                              <div className="p-3">
+                                {/* First row: January to April */}
                                 <div className="d-flex justify-content-between mb-3">
-                                  <div
-                                    className="card "
-                                    style={{ height: "100px", width: "250px" }}
-                                  >
-                                    <div className=" p-3  ">
-                                      <div className="fs-5">
-                                        <input
-                                          className=""
-                                          type="checkbox"
-                                          style={{
-                                            marginTop: "10px",
-                                            width: "20px",
-                                            height: "20px",
-                                          }}
-                                        />
-                                        <label
-                                          style={{
-                                            marginLeft: "20px",
-                                            fontSize: "20px",
-                                          }}
-                                        >
-                                          May
-                                        </label>
-                                        <div className="d-flex justify-content-between ">
-                                          <label
+                                  {[...Array(4).keys()].map((monthIndex) => (
+                                    <div
+                                      key={monthIndex}
+                                      className="card"
+                                      style={{
+                                        height: "100px",
+                                        width: "250px",
+                                      }}
+                                    >
+                                      <div className="p-3">
+                                        <div className="fs-5">
+                                          <input
                                             className=""
-                                            style={{ fontSize: "15px" }}
+                                            type="checkbox"
+                                            style={{
+                                              marginTop: "10px",
+                                              width: "20px",
+                                              height: "20px",
+                                            }}
+                                            onChange={(e) =>
+                                              handleCheckboxChange(
+                                                getMonthName(monthIndex),
+                                                e.target.checked,
+                                                28,
+                                                monthIndex
+                                              )
+                                            }
+                                          />
+                                          <label
+                                            style={{
+                                              marginLeft: "20px",
+                                              fontSize: "20px",
+                                            }}
                                           >
-                                            2 Child Package
+                                            {getMonthName(monthIndex)}
                                           </label>
-
-                                          <label style={{ marginTop: "-4px" }}>
-                                            €28
-                                          </label>
+                                          <div className="d-flex justify-content-between">
+                                            <label style={{ fontSize: "15px" }}>
+                                              2 Child Package
+                                            </label>
+                                            <label
+                                              style={{ marginTop: "-4px" }}
+                                            >
+                                              €28
+                                            </label>
+                                          </div>
                                         </div>
                                       </div>
                                     </div>
-                                  </div>
-
-                                  <div
-                                    className="card "
-                                    style={{ height: "100px", width: "250px" }}
-                                  >
-                                    <div className=" p-3  ">
-                                      <div className="fs-5">
-                                        <input
-                                          className=""
-                                          type="checkbox"
-                                          style={{
-                                            marginTop: "10px",
-                                            width: "20px",
-                                            height: "20px",
-                                          }}
-                                        />
-                                        <label
-                                          style={{
-                                            marginLeft: "20px",
-                                            fontSize: "20px",
-                                          }}
-                                        >
-                                          June
-                                        </label>
-                                        <div className="d-flex justify-content-between ">
-                                          <label
-                                            className=""
-                                            style={{ fontSize: "15px" }}
-                                          >
-                                            2 Child Package
-                                          </label>
-
-                                          <label style={{ marginTop: "-4px" }}>
-                                            €28
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div
-                                    className="card "
-                                    style={{ height: "100px", width: "250px" }}
-                                  >
-                                    <div className=" p-3  ">
-                                      <div className="fs-5">
-                                        <input
-                                          className=""
-                                          type="checkbox"
-                                          style={{
-                                            marginTop: "10px",
-                                            width: "20px",
-                                            height: "20px",
-                                          }}
-                                        />
-                                        <label
-                                          style={{
-                                            marginLeft: "20px",
-                                            fontSize: "20px",
-                                          }}
-                                        >
-                                          July
-                                        </label>
-                                        <div className="d-flex justify-content-between ">
-                                          <label
-                                            className=""
-                                            style={{ fontSize: "15px" }}
-                                          >
-                                            2 Child Package
-                                          </label>
-
-                                          <label style={{ marginTop: "-4px" }}>
-                                            €28
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div
-                                    className="card "
-                                    style={{ height: "100px", width: "250px" }}
-                                  >
-                                    <div className=" p-3  ">
-                                      <div className="fs-5">
-                                        <input
-                                          className=""
-                                          type="checkbox"
-                                          style={{
-                                            marginTop: "10px",
-                                            width: "20px",
-                                            height: "20px",
-                                          }}
-                                        />
-                                        <label
-                                          style={{
-                                            marginLeft: "20px",
-                                            fontSize: "20px",
-                                          }}
-                                        >
-                                          August
-                                        </label>
-                                        <div className="d-flex justify-content-between ">
-                                          <label
-                                            className=""
-                                            style={{ fontSize: "15px" }}
-                                          >
-                                            2 Child Package
-                                          </label>
-
-                                          <label style={{ marginTop: "-4px" }}>
-                                            €28
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
+                                  ))}
                                 </div>
-
+                                {/* Second row: May to August */}
                                 <div className="d-flex justify-content-between mb-3">
-                                  <div
-                                    className="card "
-                                    style={{ height: "100px", width: "250px" }}
-                                  >
-                                    <div className=" p-3  ">
-                                      <div className="fs-5">
-                                        <input
-                                          className=""
-                                          type="checkbox"
-                                          style={{
-                                            marginTop: "10px",
-                                            width: "20px",
-                                            height: "20px",
-                                          }}
-                                        />
-                                        <label
-                                          style={{
-                                            marginLeft: "20px",
-                                            fontSize: "20px",
-                                          }}
-                                        >
-                                          September
-                                        </label>
-                                        <div className="d-flex justify-content-between ">
-                                          <label
+                                  {[...Array(4).keys()].map((monthIndex) => (
+                                    <div
+                                      key={monthIndex + 4}
+                                      className="card"
+                                      style={{
+                                        height: "100px",
+                                        width: "250px",
+                                      }}
+                                    >
+                                      <div className="p-3">
+                                        <div className="fs-5">
+                                          <input
                                             className=""
-                                            style={{ fontSize: "15px" }}
+                                            type="checkbox"
+                                            style={{
+                                              marginTop: "10px",
+                                              width: "20px",
+                                              height: "20px",
+                                            }}
+                                            onChange={(e) =>
+                                              handleCheckboxChange(
+                                                getMonthName(monthIndex + 4),
+                                                e.target.checked,
+                                                28,
+                                                monthIndex + 4
+                                              )
+                                            }
+                                          />
+                                          <label
+                                            style={{
+                                              marginLeft: "20px",
+                                              fontSize: "20px",
+                                            }}
                                           >
-                                            2 Child Package
+                                            {getMonthName(monthIndex + 4)}
                                           </label>
-
-                                          <label style={{ marginTop: "-4px" }}>
-                                            €28
-                                          </label>
+                                          <div className="d-flex justify-content-between">
+                                            <label style={{ fontSize: "15px" }}>
+                                              2 Child Package
+                                            </label>
+                                            <label
+                                              style={{ marginTop: "-4px" }}
+                                            >
+                                              €28
+                                            </label>
+                                          </div>
                                         </div>
                                       </div>
                                     </div>
-                                  </div>
-
-                                  <div
-                                    className="card "
-                                    style={{ height: "100px", width: "250px" }}
-                                  >
-                                    <div className=" p-3  ">
-                                      <div className="fs-5">
-                                        <input
-                                          className=""
-                                          type="checkbox"
-                                          style={{
-                                            marginTop: "10px",
-                                            width: "20px",
-                                            height: "20px",
-                                          }}
-                                        />
-                                        <label
-                                          style={{
-                                            marginLeft: "20px",
-                                            fontSize: "20px",
-                                          }}
-                                        >
-                                          Octomber
-                                        </label>
-                                        <div className="d-flex justify-content-between ">
-                                          <label
+                                  ))}
+                                </div>
+                                {/* Third row: September to December */}
+                                <div className="d-flex justify-content-between mb-3">
+                                  {[...Array(4).keys()].map((monthIndex) => (
+                                    <div
+                                      key={monthIndex + 8}
+                                      className="card"
+                                      style={{
+                                        height: "100px",
+                                        width: "250px",
+                                      }}
+                                    >
+                                      <div className="p-3">
+                                        <div className="fs-5">
+                                          <input
                                             className=""
-                                            style={{ fontSize: "15px" }}
+                                            type="checkbox"
+                                            style={{
+                                              marginTop: "10px",
+                                              width: "20px",
+                                              height: "20px",
+                                            }}
+                                            onChange={(e) =>
+                                              handleCheckboxChange(
+                                                getMonthName(monthIndex + 8),
+                                                e.target.checked,
+                                                28,
+                                                monthIndex + 8
+                                              )
+                                            }
+                                          />
+                                          <label
+                                            style={{
+                                              marginLeft: "20px",
+                                              fontSize: "20px",
+                                            }}
                                           >
-                                            2 Child Package
+                                            {getMonthName(monthIndex + 8)}
                                           </label>
-
-                                          <label style={{ marginTop: "-4px" }}>
-                                            €28
-                                          </label>
+                                          <div className="d-flex justify-content-between">
+                                            <label style={{ fontSize: "15px" }}>
+                                              2 Child Package
+                                            </label>
+                                            <label
+                                              style={{ marginTop: "-4px" }}
+                                            >
+                                              €28
+                                            </label>
+                                          </div>
                                         </div>
                                       </div>
                                     </div>
-                                  </div>
-
-                                  <div
-                                    className="card "
-                                    style={{ height: "100px", width: "250px" }}
-                                  >
-                                    <div className=" p-3  ">
-                                      <div className="fs-5">
-                                        <input
-                                          className=""
-                                          type="checkbox"
-                                          style={{
-                                            marginTop: "10px",
-                                            width: "20px",
-                                            height: "20px",
-                                          }}
-                                        />
-                                        <label
-                                          style={{
-                                            marginLeft: "20px",
-                                            fontSize: "20px",
-                                          }}
-                                        >
-                                          November
-                                        </label>
-                                        <div className="d-flex justify-content-between ">
-                                          <label
-                                            className=""
-                                            style={{ fontSize: "15px" }}
-                                          >
-                                            2 Child Package
-                                          </label>
-
-                                          <label style={{ marginTop: "-4px" }}>
-                                            €28
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div
-                                    className="card "
-                                    style={{ height: "100px", width: "250px" }}
-                                  >
-                                    <div className=" p-3  ">
-                                      <div className="fs-5">
-                                        <input
-                                          className=""
-                                          type="checkbox"
-                                          style={{
-                                            marginTop: "10px",
-                                            width: "20px",
-                                            height: "20px",
-                                          }}
-                                        />
-                                        <label
-                                          style={{
-                                            marginLeft: "20px",
-                                            fontSize: "20px",
-                                          }}
-                                        >
-                                          December
-                                        </label>
-                                        <div className="d-flex justify-content-between ">
-                                          <label
-                                            className=""
-                                            style={{ fontSize: "15px" }}
-                                          >
-                                            2 Child Package
-                                          </label>
-
-                                          <label style={{ marginTop: "-4px" }}>
-                                            €28
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
+                                  ))}
                                 </div>
                               </div>
-
                               {/* Form 1 elements */}
                               {/* Add your form 1 content here */}
                               {/* Back button to go back to card selection */}
                             </form>
-
-                            <div className="mt-4" style={{ height: "100px" }}>
-                              <label className="fs-3">Your Payment : </label>
+                            <div className="mt-1" style={{ height: "100px" }}>
+                              <label className="fs-3">
+                                Your Payment : {totalPayment} €
+                              </label>
                             </div>
 
                             <div>
@@ -823,147 +576,151 @@ export default function BankPayment() {
                                 type="file"
                                 style={{ marginTop: "-10px" }}
                               />
+
+                               <div className="p-3">
+                              <button className="btn btn-primary mt-2">Submit</button>
+                              </div>
                             </div>
 
                             <div>
-                              <div className="d-flex" style={{marginTop:"40px"}}>
-                                <span
-                                  className=""
-                                  style={{ color: "red", fontSize: "40px" }}
-                                >
-                                  *
-                                </span>
-                                <label
-                                  for="formFileLg"
-                                  className="form-label"
-                                  style={{
-                                    marginTop: "14px",
-                                    marginLeft: "10px",
-                                    fontSize: "15px",
-                                  }}
-                                >
-                                  Bank details
-                                </label>
-                              </div>
-                              <div className="mt-2 d-flex">
-                                <div
-                                  className="card"
-                                  style={{ height: "180px", width: "350px" }}
-                                >
-                                  <div className="p-3">
-                                    <div>
-                                    <label>Account Holder Name </label>
-                                    <label className="" style={{marginLeft:"10px"}}>:</label>
-                                    <label className="" style={{marginLeft:"10px"}}>N.A.A.T. Samaranayake</label>
-                                    </div>
+  <div className="d-flex" style={{marginTop:"40px"}}>
+    <span
+      className=""
+      style={{ color: "red", fontSize: "40px" }}
+    >
+      *
+    </span>
+    <label
+      for="formFileLg"
+      className="form-label"
+      style={{
+        marginTop: "14px",
+        marginLeft: "10px",
+        fontSize: "15px",
+      }}
+    >
+      Bank details
+    </label>
+  </div>
+  <div className="mt-2 d-flex">
+    <div
+      className="card"
+      style={{ height: "180px", width: "350px" }}
+    >
+      <div className="p-3">
+        <div>
+        <label>Account Holder Name </label>
+        <label className="" style={{marginLeft:"10px"}}>:</label>
+        <label className="" style={{marginLeft:"10px"}}>N.A.A.T. Samaranayake</label>
+        </div>
 
-                                    <div>
-                                    <label>Bank Name </label>
-                                    <label className="" style={{marginLeft:"10px"}}>:</label>
-                                    <label className="" style={{marginLeft:"10px"}}>BOC</label>
-                                    </div>
+        <div>
+        <label>Bank Name </label>
+        <label className="" style={{marginLeft:"10px"}}>:</label>
+        <label className="" style={{marginLeft:"10px"}}>BOC</label>
+        </div>
 
-                                    <div>
-                                    <label>Account Number </label>
-                                    <label className="" style={{marginLeft:"10px"}}>:</label>
-                                    <label className="" style={{marginLeft:"10px"}}>2005823659712</label>
-                                    </div>
+        <div>
+        <label>Account Number </label>
+        <label className="" style={{marginLeft:"10px"}}>:</label>
+        <label className="" style={{marginLeft:"10px"}}>2005823659712</label>
+        </div>
 
-                                    <div>
-                                    <label>Branch Name </label>
-                                    <label className="" style={{marginLeft:"10px"}}>:</label>
-                                    <label className="" style={{marginLeft:"10px"}}>Nittambuwa</label>
-                                    </div>
+        <div>
+        <label>Branch Name </label>
+        <label className="" style={{marginLeft:"10px"}}>:</label>
+        <label className="" style={{marginLeft:"10px"}}>Nittambuwa</label>
+        </div>
 
-                                    <div>
-                                    <label>Bank Code </label>
-                                    <label className="" style={{marginLeft:"10px"}}>:</label>
-                                    <label className="" style={{marginLeft:"10px"}}>114</label>
-                                    </div>
+        <div>
+        <label>Bank Code </label>
+        <label className="" style={{marginLeft:"10px"}}>:</label>
+        <label className="" style={{marginLeft:"10px"}}>114</label>
+        </div>
 
-                                   
-                                  </div>
-                                </div>
+       
+      </div>
+    </div>
 
-                                <div
-                                  className="card"
-                                  style={{ height: "180px", width: "350px",marginLeft:"20px" }}
-                                >
-                                  <div className="p-3">
-                                    <div>
-                                    <label>Account Holder Name </label>
-                                    <label className="" style={{marginLeft:"10px"}}>:</label>
-                                    <label className="" style={{marginLeft:"10px"}}>N.A.A.T. Samaranayake</label>
-                                    </div>
+    <div
+      className="card"
+      style={{ height: "180px", width: "350px",marginLeft:"20px" }}
+    >
+      <div className="p-3">
+        <div>
+        <label>Account Holder Name </label>
+        <label className="" style={{marginLeft:"10px"}}>:</label>
+        <label className="" style={{marginLeft:"10px"}}>N.A.A.T. Samaranayake</label>
+        </div>
 
-                                    <div>
-                                    <label>Bank Name </label>
-                                    <label className="" style={{marginLeft:"10px"}}>:</label>
-                                    <label className="" style={{marginLeft:"10px"}}>BOC</label>
-                                    </div>
+        <div>
+        <label>Bank Name </label>
+        <label className="" style={{marginLeft:"10px"}}>:</label>
+        <label className="" style={{marginLeft:"10px"}}>BOC</label>
+        </div>
 
-                                    <div>
-                                    <label>Account Number </label>
-                                    <label className="" style={{marginLeft:"10px"}}>:</label>
-                                    <label className="" style={{marginLeft:"10px"}}>2005823659712</label>
-                                    </div>
+        <div>
+        <label>Account Number </label>
+        <label className="" style={{marginLeft:"10px"}}>:</label>
+        <label className="" style={{marginLeft:"10px"}}>2005823659712</label>
+        </div>
 
-                                    <div>
-                                    <label>Branch Name </label>
-                                    <label className="" style={{marginLeft:"10px"}}>:</label>
-                                    <label className="" style={{marginLeft:"10px"}}>Nittambuwa</label>
-                                    </div>
+        <div>
+        <label>Branch Name </label>
+        <label className="" style={{marginLeft:"10px"}}>:</label>
+        <label className="" style={{marginLeft:"10px"}}>Nittambuwa</label>
+        </div>
 
-                                    <div>
-                                    <label>Bank Code </label>
-                                    <label className="" style={{marginLeft:"10px"}}>:</label>
-                                    <label className="" style={{marginLeft:"10px"}}>114</label>
-                                    </div>
+        <div>
+        <label>Bank Code </label>
+        <label className="" style={{marginLeft:"10px"}}>:</label>
+        <label className="" style={{marginLeft:"10px"}}>114</label>
+        </div>
 
-                                   
-                                  </div>
-                                </div>
+       
+      </div>
+    </div>
 
-                                <div
-                                  className="card"
-                                  style={{ height: "180px", width: "350px",marginLeft:"20px" }}
-                                >
-                                  <div className="p-3">
-                                    <div>
-                                    <label>Account Holder Name </label>
-                                    <label className="" style={{marginLeft:"10px"}}>:</label>
-                                    <label className="" style={{marginLeft:"10px"}}>N.A.A.T. Samaranayake</label>
-                                    </div>
+    <div
+      className="card"
+      style={{ height: "180px", width: "350px",marginLeft:"20px" }}
+    >
+      <div className="p-3">
+        <div>
+        <label>Account Holder Name </label>
+        <label className="" style={{marginLeft:"10px"}}>:</label>
+        <label className="" style={{marginLeft:"10px"}}>N.A.A.T. Samaranayake</label>
+        </div>
 
-                                    <div>
-                                    <label>Bank Name </label>
-                                    <label className="" style={{marginLeft:"10px"}}>:</label>
-                                    <label className="" style={{marginLeft:"10px"}}>BOC</label>
-                                    </div>
+        <div>
+        <label>Bank Name </label>
+        <label className="" style={{marginLeft:"10px"}}>:</label>
+        <label className="" style={{marginLeft:"10px"}}>BOC</label>
+        </div>
 
-                                    <div>
-                                    <label>Account Number </label>
-                                    <label className="" style={{marginLeft:"10px"}}>:</label>
-                                    <label className="" style={{marginLeft:"10px"}}>2005823659712</label>
-                                    </div>
+        <div>
+        <label>Account Number </label>
+        <label className="" style={{marginLeft:"10px"}}>:</label>
+        <label className="" style={{marginLeft:"10px"}}>2005823659712</label>
+        </div>
 
-                                    <div>
-                                    <label>Branch Name </label>
-                                    <label className="" style={{marginLeft:"10px"}}>:</label>
-                                    <label className="" style={{marginLeft:"10px"}}>Nittambuwa</label>
-                                    </div>
+        <div>
+        <label>Branch Name </label>
+        <label className="" style={{marginLeft:"10px"}}>:</label>
+        <label className="" style={{marginLeft:"10px"}}>Nittambuwa</label>
+        </div>
 
-                                    <div>
-                                    <label>Bank Code </label>
-                                    <label className="" style={{marginLeft:"10px"}}>:</label>
-                                    <label className="" style={{marginLeft:"10px"}}>114</label>
-                                    </div>
+        <div>
+        <label>Bank Code </label>
+        <label className="" style={{marginLeft:"10px"}}>:</label>
+        <label className="" style={{marginLeft:"10px"}}>114</label>
+        </div>
 
-                                   
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
+       
+      </div>
+    </div>
+  </div>
+  </div>
                           </div>
                         )}
 

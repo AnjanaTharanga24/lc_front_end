@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../css/parentSidebar.css";
 import { Link } from "react-router-dom";
 export default function ParentDashboard() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   const toggleSidebar = () => {
