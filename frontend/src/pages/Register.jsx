@@ -1,19 +1,34 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import SideBar from "../component/SideBar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faUser,
+  faUserGraduate,
+  faLock,
+} from "@fortawesome/free-solid-svg-icons";
+import "../css/BankPayment.css";
+
 
 export default function Register() {
-  const [students, setStudents] = useState([{ name: "", age: "" }]);
+  const [currentForm, setCurrentForm] = useState(1); // Initialize with pending payments
 
-  const handleInputChange = (index, event) => {
-    const { name, value } = event.target;
-    const updatedStudents = [...students];
-    updatedStudents[index] = { ...updatedStudents[index], [name]: value };
-    setStudents(updatedStudents);
+  useEffect(() => {
+    // Load data related to pending payments when component mounts
+    // Your code to fetch pending payment data goes here
+  }, []);
+
+  // Function to handle click on Pending Payment card
+  const handlePendingPaymentClick = () => {
+    setCurrentForm(1); // Set current form to Form 1 (Pending Payment)
   };
 
-  const handleAddStudent = () => {
-    setStudents([...students, { name: "", age: "" }]);
+  // Function to handle click on Past Payment card
+  const handlePastPaymentClick = () => {
+    setCurrentForm(2); // Set current form to Form 2 (Past Payment)
+  };
+
+  const handlePasswordClick = () => {
+    setCurrentForm(3); // Set current form to Form 2 (Past Payment)
   };
 
   return (
@@ -24,308 +39,280 @@ export default function Register() {
         <SideBar />
         {/* Navbar Area End */}
 
-        <div className="blog-section ptb-100">
-         
-
-          <div
-            className="page-content wizard-v7-content shadow-lg  mb-5 bg-white rounded "
-            style={{ width: "850px", marginLeft: "400px" }}
-          >
-            <div className="wizard-form ">
-              <form className="form-register" action="#" method="post">
+        <div className="container-fluid mt-5">
+          <div className="row ">
+            <div
+              className=""
+              style={{ height: "auto", width: "1000px", marginLeft: "250px" }}
+            >
+              <div className="d-flex fs-4">
                 <div
-                  id="form-total"
-                  role="application"
-                  className="wizard clearfix vertical"
+                  className="card p-4 mt-3 payment-card"
+                  style={{ width: "250px", cursor: "pointer" }}
+                  onClick={handlePendingPaymentClick} // Add onClick event listener
                 >
-                  {/* SECTION 1 */}
-                  <h2>
-                    <p className="step-icon">
-                      <span>1</span>
-                    </p>
-                    <div className="step-text">
-                      <span className="step-inner-1 ">Parent Details</span>
-                      <span className="step-inner-2">Account Setup</span>
-                    </div>
-                  </h2>
-                  <section>
-                    <div className="inner ">
-                      <div className="wizard-header">
-                        <h3 className="heading">Parent Details</h3>
-                      </div>
-
-                      <div className="form-row ">
-                        <div className="form-holder form-holder-2">
-                          <label htmlFor="">Name</label>
-                          <input
-                            type="text"
-                            name=""
-                            id=""
-                            className="form-control"
-                            placeholder="Your Name"
-                            required=""
-                          />
-                        </div>
-                      </div>
-
-                      <div className="form-row ">
-                        <div className="form-holder form-holder-2">
-                          <label htmlFor="">Address</label>
-                          <textarea
-                            type="text"
-                            name=""
-                            id=""
-                            className="form-control"
-                            placeholder="Your Address"
-                            required=""
-                          />
-                        </div>
-                      </div>
-
-                      <div className="form-row ">
-                        <div className="form-holder form-holder-2">
-                          <label htmlFor="">Country</label>
-                          <select className="form-control">
-                            <option value="">Your Country</option>
-                            <option value="">Sri Lanka</option>
-                            <option value="">Italy</option>
-                            <option value="">Australia</option>
-                            <option value="">England</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div className="form-row ">
-                        <div className="form-holder form-holder-2">
-                          <label htmlFor="">Occupation</label>
-                          <input
-                            type="text"
-                            name=""
-                            id=""
-                            className="form-control"
-                            placeholder="Your Occupation"
-                            required=""
-                          />
-                        </div>
-                      </div>
-
-                      <div className="form-row">
-                        <div className="form-holder form-holder-2">
-                          <label htmlFor="your_email">Email Address</label>
-                          <input
-                            type="email"
-                            name="your_email"
-                            id="your_email"
-                            className="form-control"
-                            pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"
-                            placeholder="Your Email"
-                            required=""
-                          />
-                        </div>
-                      </div>
-
-                      <div className="form-row ">
-                        <div className="form-holder form-holder-2">
-                          <label htmlFor="">Contact Number</label>
-                          <input
-                            type="mobile"
-                            name=""
-                            id=""
-                            className="form-control"
-                            placeholder="Your Mobile"
-                            required=""
-                          />
-                        </div>
-                      </div>
-
-                      <div className="form-row ">
-                        <div className="form-holder form-holder-2">
-                          <label htmlFor="">Intake</label>
-                          <select className="form-control">
-                            <option value="">Select Intake</option>
-                            <option value="">June Intake</option>
-                            <option value="">Regular Intake</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                  {/* SECTION 2 */}
-                  <h2>
-                    <p className="step-icon">
-                      <span>2</span>
-                    </p>
-                    <div className="step-text">
-                      <span className="step-inner-1">Student Details</span>
-                      <span className="step-inner-2">Child Details</span>
-                    </div>
-                  </h2>
-                  <section>
-                    <div className="inner">
-                      <div className="wizard-header">
-                        <h3 className="heading">Student Details</h3>
-                      </div>
-                      {students.map((student) => (
-                        <div key={student.id}>
-                          <div className="form-row">
-                            <div className="form-holder form-holder-2">
-                              <label htmlFor={`student_name_${student.id}`}>
-                                Student Name
-                              </label>
-                              <input
-                                type="text"
-                                name={`student_name_${student.id}`}
-                                value={student.name}
-                                onChange={(e) =>
-                                  handleInputChange(student.id, e)
-                                }
-                                className="form-control"
-                                placeholder="Student Name"
-                                required
-                              />
-                            </div>
-                          </div>
-
-                          <div className="form-row">
-                            <div className="form-holder form-holder-2">
-                              <label htmlFor={`student_age_${student.id}`}>
-                                Student Age
-                              </label>
-                              <input
-                                type="number"
-                                name={`student_age_${student.id}`}
-                                value={student.age}
-                                onChange={(e) =>
-                                  handleInputChange(student.id, e)
-                                }
-                                className="form-control"
-                                placeholder="Student Age"
-                                required
-                              />
-                            </div>
-                          </div>
-
-                          <div className="form-row ">
-                            <div className="form-holder form-holder-2">
-                              <label htmlFor="">Gender</label>
-                              <select className="form-control">
-                                <option value="">Select Gender</option>
-                                <option value="">Male</option>
-                                <option value="">Female</option>
-                              </select>
-                            </div>
-                          </div>
-
-                          <div className="form-row">
-                            <div className="form-holder form-holder-2">
-                              <label htmlFor={`student_dob_${student.id}`}>
-                                Date of Birth
-                              </label>
-                              <input
-                                type="date"
-                                name={`student_dob_${student.id}`}
-                                value={student.dob}
-                                onChange={(e) =>
-                                  handleInputChange(student.id, e)
-                                }
-                                className="form-control"
-                                required
-                              />
-                            </div>
-                          </div>
-
-                          <div className="form-row ">
-                            <div className="form-holder form-holder-2">
-                              <label htmlFor="">Exam Level</label>
-                              <select className="form-control">
-                                <option value="">Select Exam Level</option>
-                                <option value="">Level 1</option>
-                                <option value="">Level 2</option>
-                              </select>
-                            </div>
-                          </div>
-
-                          <div className="form-row ">
-                            <div className="form-holder form-holder-2">
-                              <label htmlFor="">Exam Level</label>
-                              <select className="form-control">
-                                <option value="">Select Grade</option>
-                                <option value="">Grade 1</option>
-                                <option value="">Grade 2</option>
-                                <option value="">Grade 3</option>
-                                <option value="">Grade 4</option>
-                                <option value="">Grade 5</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                      <button
-                        type="button"
-                        className="btn btn-primary"
-                        onClick={handleAddStudent}
-                      >
-                        Add Student
-                      </button>
-                    </div>
-                  </section>
-
-                  {/* SECTION 3 */}
-                  <h2>
-                    <p className="step-icon">
-                      <span>3</span>
-                    </p>
-                    <div className="step-text">
-                      <span className="step-inner-1">Add Password</span>
-                      <span className="step-inner-2">your password</span>
-                    </div>
-                  </h2>
-                  <section>
-                    <div className="inner ">
-                      <div className="wizard-header">
-                        <h3 className="heading">Password Details</h3>
-                      </div>
-
-                      <div className="form-row">
-                        <div className="form-holder form-holder-2">
-                          <label htmlFor="password">Password</label>
-                          <input
-                            type="password"
-                            name="password"
-                            id="password"
-                            className="form-control"
-                            placeholder="Password"
-                            required=""
-                          />
-                        </div>
-                      </div>
-
-                      <div className="form-row">
-                        <div className="form-holder form-holder-2">
-                          <label htmlFor="confirm_password">
-                            Confirm Password
-                          </label>
-                          <input
-                            type="password"
-                            name="confirm_password"
-                            id="confirm_password"
-                            className="form-control"
-                            placeholder="Password"
-                            required=""
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </section>
+                  <FontAwesomeIcon
+                    icon={faUser} // Choose an appropriate icon, here using faUser as an example
+                    className="payment-icon"
+                  />
+                  <span className="payment-text mt-1">Parent Details</span>
                 </div>
-              </form>
+
+                <div
+                  className="card p-4 mt-3 payment-card"
+                  style={{
+                    width: "250px",
+                    marginLeft: "20px",
+                    cursor: "pointer",
+                  }}
+                  onClick={handlePastPaymentClick} // Add onClick event listener
+                >
+                  <FontAwesomeIcon
+                    icon={faUserGraduate}
+                    className="payment-icon"
+                  />
+                  <span className="payment-text mt-1">Student details</span>
+                </div>
+
+                <div
+                  className="card p-4 mt-3 payment-card"
+                  style={{
+                    width: "250px",
+                    marginLeft: "20px",
+                    cursor: "pointer",
+                  }}
+                  onClick={handlePasswordClick} // Add onClick event listener
+                >
+                  <FontAwesomeIcon icon={faLock} className="payment-icon" />
+                  <span className="payment-text mt-1">Password</span>
+                </div>
+              </div>
+
+              <div>
+                {currentForm === 1 && (
+                  <div
+                    className="wizard-form card p-4 mt-3 mb-4"
+                    style={{ height: "auto" }}
+                  >
+                    <form>
+                      <div className="form-group">
+                        <label htmlFor="exampleInputEmail1">Name</label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="Enter name"
+                        />
+                      </div>
+
+                      <div className="form-group">
+                        <label>Address</label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="Enter address"
+                        />
+                      </div>
+
+                      <div className="form-group">
+                        <label htmlFor="exampleFormControlSelect1">
+                          Country
+                        </label>
+                        <select
+                          className="form-control"
+                          id="exampleFormControlSelect1"
+                        >
+                          <option>select country</option>
+                          <option>Srilanka</option>
+                          <option>America</option>
+                          <option>Italy</option>
+                          <option>Austrailia</option>
+                        </select>
+                      </div>
+
+                      <div className="form-group">
+                        <label>Occupation</label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="Enter occupation"
+                        />
+                      </div>
+
+                      <div className="form-group">
+                        <label>Email</label>
+                        <input
+                          type="email"
+                          className="form-control"
+                          placeholder="Enter email"
+                        />
+                      </div>
+
+                      <div className="form-group">
+                        <label>Contact number</label>
+                        <input
+                          type="mobile"
+                          className="form-control"
+                          placeholder="Enter contact"
+                        />
+                      </div>
+
+                      <div className="form-group">
+                        <label htmlFor="exampleFormControlSelect1">
+                          Intake
+                        </label>
+                        <select
+                          className="form-control"
+                          id="exampleFormControlSelect1"
+                        >
+                          <option>select intake</option>
+                          <option>June intake</option>
+                          <option>Regular intake</option>
+                        </select>
+                      </div>
+
+                      <button type="submit" className="btn btn-success mt-3">
+                        Next
+                      </button>
+                    </form>
+                  </div>
+                )}
+
+                {currentForm === 2 && (
+                  <div
+                    className="wizard-form card p-4 mt-3 mb-4"
+                    style={{ height: "auto" }}
+                  >
+                    <form>
+                      <div className="form-group">
+                        <label htmlFor="exampleInputEmail1">Student name</label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="Enter name"
+                        />
+                      </div>
+
+                      <div className="form-group">
+                        <label>Age</label>
+                        <input
+                          type="number"
+                          className="form-control"
+                          placeholder="Enter age"
+                        />
+                      </div>
+
+                      <div className="form-group">
+                        <label htmlFor="exampleFormControlSelect1">
+                          Gender
+                        </label>
+                        <select
+                          className="form-control"
+                          id="exampleFormControlSelect1"
+                        >
+                          <option>select gender</option>
+                          <option>male</option>
+                          <option>female</option>
+                        </select>
+                      </div>
+
+                      <div className="form-row mb-3">
+                        <div className="form-holder form-holder-2">
+                          <label htmlFor="student_dob">Date of Birth</label>
+                          <input
+                            type="date"
+                            className="form-control"
+                            required
+                            style={{ width: "400px" }}
+                          />
+                        </div>
+                      </div>
+
+                      <div className="form-group">
+                        <label htmlFor="exampleFormControlSelect1">
+                          Exam level
+                        </label>
+                        <select
+                          className="form-control"
+                          id="exampleFormControlSelect1"
+                        >
+                          <option>select level</option>
+                          <option>level 1</option>
+                          <option>level 2</option>
+                        </select>
+                      </div>
+
+                      <div className="form-group">
+                        <label htmlFor="exampleFormControlSelect1">
+                          Exam level
+                        </label>
+                        <select
+                          className="form-control"
+                          id="exampleFormControlSelect1"
+                        >
+                          <option>select grade</option>
+                          <option>Grade 1</option>
+                          <option>Grade 2</option>
+                          <option>Grade 3</option>
+                          <option>Grade 4</option>
+                          <option>Grade 5</option>
+                          <option>Grade 6</option>
+                          <option>Grade 7</option>
+                        </select>
+                      </div>
+
+                      <div className="d-flex justify-content-between">
+                        <button type="submit" className="btn btn-success">
+                          Next
+                        </button>
+
+                        <button type="submit" className="btn btn-primary">
+                          Add More
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                )}
+
+                {currentForm === 3 && (
+                  <div
+                    className="wizard-form card p-4 mt-3 mb-4"
+                    style={{ height: "auto" }}
+                  >
+                    <form>
+                      <div className="form-group">
+                        <label htmlFor="exampleInputEmail1">Password</label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="Enter password"
+                        />
+                      </div>
+
+                      <div className="form-group">
+                        <label>Confirm password</label>
+                        <input
+                          type="number"
+                          className="form-control"
+                          placeholder="Enter password again"
+                        />
+                      </div>
+
+                      <button type="submit" className="btn btn-primary mt-3">
+                        Submit
+                      </button>
+                    </form>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
+
         {/* Blog Section Start */}
 
         {/* Footer Section Start */}
-        <div className="footer-area ft-bg">
+
+        <div className="footer-area ft-bg mt-5">
           <div className="footer-widget-info ptb-100">
             <div className="container">
               <div className="main-max-width">
@@ -489,6 +476,7 @@ export default function Register() {
             </div>
           </div>
         </div>
+
         {/* Footer Section End */}
         {/* Back to Top */}
         <button
