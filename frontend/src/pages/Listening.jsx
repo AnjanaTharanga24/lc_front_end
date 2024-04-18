@@ -1,6 +1,5 @@
 import React from "react";
-import SideBar from "../component/SideBar";
-import SideBar2 from "../component/SideBar2";
+
 import { Link } from "react-router-dom";
 
 function Listening() {
@@ -353,7 +352,7 @@ function Listening() {
 
         {/* Navbar Area End */}
         {/* Responsive Navbar Start */}
-        <div
+        {/* <div
           className="responsive-navbar offcanvas offcanvas-end border-0"
           data-bs-backdrop="static"
           tabIndex={-1}
@@ -507,7 +506,7 @@ function Listening() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Responsive Navbar End */}
 
         {/*  Page Title Area Start*/}
