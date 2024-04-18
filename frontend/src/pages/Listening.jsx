@@ -515,14 +515,14 @@ function Listening() {
           <div className="container">
             <div className="main-max-width">
               <div className="page-title-content">
-                <h2>Blog</h2>
+                {/* <h2>Blog</h2>
                 <ul className="page-breadcrumb align-items-center list-unstyle">
                   <li className="breadcrumb-item">
                     <a href="index.html">Home</a>
                   </li>
                   <li className="breadcrumb-item" />
                   <li className="primery-link">Blog</li>
-                </ul>
+                </ul> */}
                 <div className="shape-1 moveHorizontal">
                   <img src="assets/img/icon/shape-2.svg" alt="image" />
                 </div>
@@ -546,9 +546,9 @@ function Listening() {
                   <div className="single-blog-box">
                     <div className="image position-relative">
                       <a href="blog-details.html">
-                        <img src="assets/img/all-img/blog-1.png" alt="image" />
+                        <img src="assets/img/all-img/listningBoss.jpg" alt="image" />
                       </a>
-                      <div className="cr-tag">
+                      {/* <div className="cr-tag">
                         <a href="author.html">Design</a>
                       </div>
                       <div className="author">
@@ -559,7 +559,7 @@ function Listening() {
                           />
                           <span>Eleanor Pena</span>
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="content">
                       <ul className="cr-items d-flex list-unstyle">
@@ -576,12 +576,11 @@ function Listening() {
                       </ul>
                       <h3 className="mb-15 fs-20">
                         <a href="blog-details.html">
-                          Business modeless and pricing strategies are
-                          essential.
+                        A request from your boss
                         </a>
                       </h3>
                       <p>
-                        This immersive course is crafted to provide participants
+                      Listen to requests from a manager to practise and improve your listening skills.
                       </p>
                     </div>
                   </div>
@@ -590,9 +589,9 @@ function Listening() {
                   <div className="single-blog-box">
                     <div className="image position-relative">
                       <a href="blog-details.html">
-                        <img src="assets/img/all-img/blog-2.png" alt="image" />
+                        <img src="assets/img/all-img/voiceMsg.jpg" alt="image" />
                       </a>
-                      <div className="cr-tag">
+                      {/* <div className="cr-tag">
                         <a href="author.html">Design</a>
                       </div>
                       <div className="author">
@@ -603,7 +602,7 @@ function Listening() {
                           />
                           <span>Eleanor Pena</span>
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="content">
                       <ul className="cr-items d-flex list-unstyle">
@@ -620,12 +619,11 @@ function Listening() {
                       </ul>
                       <h3 className="mb-15 fs-20">
                         <a href="blog-details.html">
-                          Business modeless and pricing strategies are
-                          essential.
+                        A voicemail message
                         </a>
                       </h3>
                       <p>
-                        This immersive course is crafted to provide participants
+                      Listen to a voicemail message and answer the questions to practise your listening skills.
                       </p>
                     </div>
                   </div>
@@ -634,9 +632,9 @@ function Listening() {
                   <div className="single-blog-box">
                     <div className="image position-relative">
                       <a href="blog-details.html">
-                        <img src="assets/img/all-img/blog-3.png" alt="image" />
+                        <img src="assets/img/all-img/bookingTable.jpg" alt="image" />
                       </a>
-                      <div className="cr-tag">
+                      {/* <div className="cr-tag">
                         <a href="author.html">Design</a>
                       </div>
                       <div className="author">
@@ -647,7 +645,7 @@ function Listening() {
                           />
                           <span>Eleanor Pena</span>
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="content">
                       <ul className="cr-items d-flex list-unstyle">
@@ -664,12 +662,11 @@ function Listening() {
                       </ul>
                       <h3 className="mb-15 fs-20">
                         <a href="blog-details.html">
-                          Business modeless and pricing strategies are
-                          essential.
+                        Booking a table
                         </a>
                       </h3>
                       <p>
-                        This immersive course is crafted to provide participants
+                      Listen to someone booking a table in a restaurant to practise your listening skills!
                       </p>
                     </div>
                   </div>
@@ -678,9 +675,9 @@ function Listening() {
                   <div className="single-blog-box">
                     <div className="image position-relative">
                       <a href="blog-details.html">
-                        <img src="assets/img/all-img/blog-4.png" alt="image" />
+                        <img src="assets/img/all-img/library.jpg" alt="image" />
                       </a>
-                      <div className="cr-tag">
+                      {/* <div className="cr-tag">
                         <a href="author.html">Design</a>
                       </div>
                       <div className="author">
@@ -691,7 +688,7 @@ function Listening() {
                           />
                           <span>Eleanor Pena</span>
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="content">
                       <ul className="cr-items d-flex list-unstyle">
@@ -708,12 +705,11 @@ function Listening() {
                       </ul>
                       <h3 className="mb-15 fs-20">
                         <a href="blog-details.html">
-                          Business modeless and pricing strategies are
-                          essential.
+                        Finding the library
                         </a>
                       </h3>
                       <p>
-                        This immersive course is crafted to provide participants
+                      Listen to a conversation about the library to practise and improve your listening skills.
                       </p>
                     </div>
                   </div>
@@ -722,9 +718,9 @@ function Listening() {
                   <div className="single-blog-box">
                     <div className="image position-relative">
                       <a href="blog-details.html">
-                        <img src="assets/img/all-img/blog-5.png" alt="image" />
+                        <img src="assets/img/all-img/teamMember.jpg" alt="image" />
                       </a>
-                      <div className="cr-tag">
+                      {/* <div className="cr-tag">
                         <a href="author.html">Design</a>
                       </div>
                       <div className="author">
@@ -735,7 +731,7 @@ function Listening() {
                           />
                           <span>Eleanor Pena</span>
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="content">
                       <ul className="cr-items d-flex list-unstyle">
@@ -752,12 +748,11 @@ function Listening() {
                       </ul>
                       <h3 className="mb-15 fs-20">
                         <a href="blog-details.html">
-                          Business modeless and pricing strategies are
-                          essential.
+                        Meeting a new team member
                         </a>
                       </h3>
                       <p>
-                        This immersive course is crafted to provide participants
+                      Listen to a conversation between two new colleagues to practise your listening skills.
                       </p>
                     </div>
                   </div>
@@ -766,9 +761,9 @@ function Listening() {
                   <div className="single-blog-box">
                     <div className="image position-relative">
                       <a href="blog-details.html">
-                        <img src="assets/img/all-img/blog-6.png" alt="image" />
+                        <img src="assets/img/all-img/dinner.jpg" alt="image" />
                       </a>
-                      <div className="cr-tag">
+                      {/* <div className="cr-tag">
                         <a href="author.html">Design</a>
                       </div>
                       <div className="author">
@@ -779,7 +774,7 @@ function Listening() {
                           />
                           <span>Eleanor Pena</span>
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="content">
                       <ul className="cr-items d-flex list-unstyle">
@@ -796,12 +791,11 @@ function Listening() {
                       </ul>
                       <h3 className="mb-15 fs-20">
                         <a href="blog-details.html">
-                          Business modeless and pricing strategies are
-                          essential.
+                        Meeting people at a dinner
                         </a>
                       </h3>
                       <p>
-                        This immersive course is crafted to provide participants
+                      Listen to introductions at a dinner party to practise and improve your listening skills.
                       </p>
                     </div>
                   </div>

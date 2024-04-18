@@ -514,14 +514,14 @@ function Writing() {
           <div className="container">
             <div className="main-max-width">
               <div className="page-title-content">
-                <h2>Blog</h2>
+                {/* <h2>Blog</h2>
                 <ul className="page-breadcrumb align-items-center list-unstyle">
                   <li className="breadcrumb-item">
                     <a href="index.html">Home</a>
                   </li>
                   <li className="breadcrumb-item" />
                   <li className="primery-link">Blog</li>
-                </ul>
+                </ul> */}
                 <div className="shape-1 moveHorizontal">
                   <img src="assets/img/icon/shape-2.svg" alt="image" />
                 </div>
@@ -545,9 +545,9 @@ function Writing() {
                   <div className="single-blog-box">
                     <div className="image position-relative">
                       <a href="blog-details.html">
-                        <img src="assets/img/all-img/blog-1.png" alt="image" />
+                        <img src="assets/img/all-img/saylate.jpg" alt="image" />
                       </a>
-                      <div className="cr-tag">
+                      {/* <div className="cr-tag">
                         <a href="author.html">Design</a>
                       </div>
                       <div className="author">
@@ -558,7 +558,7 @@ function Writing() {
                           />
                           <span>Eleanor Pena</span>
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="content">
                       <ul className="cr-items d-flex list-unstyle">
@@ -575,12 +575,11 @@ function Writing() {
                       </ul>
                       <h3 className="mb-15 fs-20">
                         <a href="blog-details.html">
-                          Business modeless and pricing strategies are
-                          essential.
+                        A message to say you're late
                         </a>
                       </h3>
                       <p>
-                        This immersive course is crafted to provide participants
+                      Learn how to write text messages to tell a friend you're going to be late.
                       </p>
                     </div>
                   </div>
@@ -589,9 +588,9 @@ function Writing() {
                   <div className="single-blog-box">
                     <div className="image position-relative">
                       <a href="blog-details.html">
-                        <img src="assets/img/all-img/blog-2.png" alt="image" />
+                        <img src="assets/img/all-img/noticeBoard.jpg" alt="image" />
                       </a>
-                      <div className="cr-tag">
+                      {/* <div className="cr-tag">
                         <a href="author.html">Design</a>
                       </div>
                       <div className="author">
@@ -602,7 +601,7 @@ function Writing() {
                           />
                           <span>Eleanor Pena</span>
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="content">
                       <ul className="cr-items d-flex list-unstyle">
@@ -619,12 +618,11 @@ function Writing() {
                       </ul>
                       <h3 className="mb-15 fs-20">
                         <a href="blog-details.html">
-                          Business modeless and pricing strategies are
-                          essential.
+                        A noticeboard message
                         </a>
                       </h3>
                       <p>
-                        This immersive course is crafted to provide participants
+                      Learn how to write a noticeboard message and practice it.
                       </p>
                     </div>
                   </div>
@@ -633,9 +631,9 @@ function Writing() {
                   <div className="single-blog-box">
                     <div className="image position-relative">
                       <a href="blog-details.html">
-                        <img src="assets/img/all-img/blog-3.png" alt="image" />
+                        <img src="assets/img/all-img/invitation.jpg" alt="image" />
                       </a>
-                      <div className="cr-tag">
+                      {/* <div className="cr-tag">
                         <a href="author.html">Design</a>
                       </div>
                       <div className="author">
@@ -646,7 +644,7 @@ function Writing() {
                           />
                           <span>Eleanor Pena</span>
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="content">
                       <ul className="cr-items d-flex list-unstyle">
@@ -663,12 +661,11 @@ function Writing() {
                       </ul>
                       <h3 className="mb-15 fs-20">
                         <a href="blog-details.html">
-                          Business modeless and pricing strategies are
-                          essential.
+                        A text message invitation
                         </a>
                       </h3>
                       <p>
-                        This immersive course is crafted to provide participants
+                      Learn how to write a text message invitation to a friend.
                       </p>
                     </div>
                   </div>
@@ -677,9 +674,9 @@ function Writing() {
                   <div className="single-blog-box">
                     <div className="image position-relative">
                       <a href="blog-details.html">
-                        <img src="assets/img/all-img/blog-4.png" alt="image" />
+                        <img src="assets/img/all-img/mail.jpg" alt="image" />
                       </a>
-                      <div className="cr-tag">
+                      {/* <div className="cr-tag">
                         <a href="author.html">Design</a>
                       </div>
                       <div className="author">
@@ -690,7 +687,7 @@ function Writing() {
                           />
                           <span>Eleanor Pena</span>
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="content">
                       <ul className="cr-items d-flex list-unstyle">
@@ -707,12 +704,11 @@ function Writing() {
                       </ul>
                       <h3 className="mb-15 fs-20">
                         <a href="blog-details.html">
-                          Business modeless and pricing strategies are
-                          essential.
+                        A thank-you email
                         </a>
                       </h3>
                       <p>
-                        This immersive course is crafted to provide participants
+                      Learn how to write a thank-you email.
                       </p>
                     </div>
                   </div>
@@ -721,9 +717,9 @@ function Writing() {
                   <div className="single-blog-box">
                     <div className="image position-relative">
                       <a href="blog-details.html">
-                        <img src="assets/img/all-img/blog-5.png" alt="image" />
+                        <img src="assets/img/all-img/application.jpg" alt="image" />
                       </a>
-                      <div className="cr-tag">
+                      {/* <div className="cr-tag">
                         <a href="author.html">Design</a>
                       </div>
                       <div className="author">
@@ -734,7 +730,7 @@ function Writing() {
                           />
                           <span>Eleanor Pena</span>
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="content">
                       <ul className="cr-items d-flex list-unstyle">
@@ -751,12 +747,11 @@ function Writing() {
                       </ul>
                       <h3 className="mb-15 fs-20">
                         <a href="blog-details.html">
-                          Business modeless and pricing strategies are
-                          essential.
+                        An application form
                         </a>
                       </h3>
                       <p>
-                        This immersive course is crafted to provide participants
+                      Learn how to fill in an application form.
                       </p>
                     </div>
                   </div>
@@ -765,9 +760,9 @@ function Writing() {
                   <div className="single-blog-box">
                     <div className="image position-relative">
                       <a href="blog-details.html">
-                        <img src="assets/img/all-img/blog-6.png" alt="image" />
+                        <img src="assets/img/all-img/hotelBook.jpg" alt="image" />
                       </a>
-                      <div className="cr-tag">
+                      {/* <div className="cr-tag">
                         <a href="author.html">Design</a>
                       </div>
                       <div className="author">
@@ -778,7 +773,7 @@ function Writing() {
                           />
                           <span>Eleanor Pena</span>
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="content">
                       <ul className="cr-items d-flex list-unstyle">
@@ -795,12 +790,11 @@ function Writing() {
                       </ul>
                       <h3 className="mb-15 fs-20">
                         <a href="blog-details.html">
-                          Business modeless and pricing strategies are
-                          essential.
+                        An email to book a hotel
                         </a>
                       </h3>
                       <p>
-                        This immersive course is crafted to provide participants
+                      Learn how to write an email to book a hotel.
                       </p>
                     </div>
                   </div>

@@ -514,14 +514,14 @@ function Speaking() {
           <div className="container">
             <div className="main-max-width">
               <div className="page-title-content">
-                <h2>Blog</h2>
+                {/* <h2>Blog</h2>
                 <ul className="page-breadcrumb align-items-center list-unstyle">
                   <li className="breadcrumb-item">
                     <a href="index.html">Home</a>
                   </li>
                   <li className="breadcrumb-item" />
                   <li className="primery-link">Blog</li>
-                </ul>
+                </ul> */}
                 <div className="shape-1 moveHorizontal">
                   <img src="assets/img/icon/shape-2.svg" alt="image" />
                 </div>
@@ -545,9 +545,9 @@ function Speaking() {
                   <div className="single-blog-box">
                     <div className="image position-relative">
                       <a href="blog-details.html">
-                        <img src="assets/img/all-img/blog-1.png" alt="image" />
+                        <img src="assets/img/all-img/teacher.jpg" alt="image" />
                       </a>
-                      <div className="cr-tag">
+                      {/* <div className="cr-tag">
                         <a href="author.html">Design</a>
                       </div>
                       <div className="author">
@@ -558,7 +558,7 @@ function Speaking() {
                           />
                           <span>Eleanor Pena</span>
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="content">
                       <ul className="cr-items d-flex list-unstyle">
@@ -575,12 +575,11 @@ function Speaking() {
                       </ul>
                       <h3 className="mb-15 fs-20">
                         <a href="blog-details.html">
-                          Business modeless and pricing strategies are
-                          essential.
+                        Checking understanding
                         </a>
                       </h3>
                       <p>
-                        This immersive course is crafted to provide participants
+                      In this video, Ema has problems understanding student. Listen to the language they use for checking understanding and practise saying the useful phrases.
                       </p>
                     </div>
                   </div>
@@ -589,9 +588,9 @@ function Speaking() {
                   <div className="single-blog-box">
                     <div className="image position-relative">
                       <a href="blog-details.html">
-                        <img src="assets/img/all-img/blog-2.png" alt="image" />
+                        <img src="assets/img/all-img/suggetion.jpg" alt="image" />
                       </a>
-                      <div className="cr-tag">
+                      {/* <div className="cr-tag">
                         <a href="author.html">Design</a>
                       </div>
                       <div className="author">
@@ -602,7 +601,7 @@ function Speaking() {
                           />
                           <span>Eleanor Pena</span>
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="content">
                       <ul className="cr-items d-flex list-unstyle">
@@ -619,12 +618,11 @@ function Speaking() {
                       </ul>
                       <h3 className="mb-15 fs-20">
                         <a href="blog-details.html">
-                          Business modeless and pricing strategies are
-                          essential.
+                        Making suggestions
                         </a>
                       </h3>
                       <p>
-                        This immersive course is crafted to provide participants
+                      In this video, Noelia and Yuna have a very good meeting. Listen to the language they use for making suggestions and practise saying the useful phrases.
                       </p>
                     </div>
                   </div>
@@ -633,9 +631,9 @@ function Speaking() {
                   <div className="single-blog-box">
                     <div className="image position-relative">
                       <a href="blog-details.html">
-                        <img src="assets/img/all-img/blog-3.png" alt="image" />
+                        <img src="assets/img/all-img/newPeople.jpg" alt="image" />
                       </a>
-                      <div className="cr-tag">
+                      {/* <div className="cr-tag">
                         <a href="author.html">Design</a>
                       </div>
                       <div className="author">
@@ -646,7 +644,7 @@ function Speaking() {
                           />
                           <span>Eleanor Pena</span>
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="content">
                       <ul className="cr-items d-flex list-unstyle">
@@ -663,12 +661,11 @@ function Speaking() {
                       </ul>
                       <h3 className="mb-15 fs-20">
                         <a href="blog-details.html">
-                          Business modeless and pricing strategies are
-                          essential.
+                        Meeting new people
                         </a>
                       </h3>
                       <p>
-                        This immersive course is crafted to provide participants
+                      In this video, Vanya meets Emir and friend. Listen to the language they use for meeting new people and practise saying the useful phrases improve knowladge.
                       </p>
                     </div>
                   </div>
@@ -677,9 +674,9 @@ function Speaking() {
                   <div className="single-blog-box">
                     <div className="image position-relative">
                       <a href="blog-details.html">
-                        <img src="assets/img/all-img/blog-4.png" alt="image" />
+                        <img src="assets/img/all-img/saySomething.jpg" alt="image" />
                       </a>
-                      <div className="cr-tag">
+                      {/* <div className="cr-tag">
                         <a href="author.html">Design</a>
                       </div>
                       <div className="author">
@@ -690,7 +687,7 @@ function Speaking() {
                           />
                           <span>Eleanor Pena</span>
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="content">
                       <ul className="cr-items d-flex list-unstyle">
@@ -707,12 +704,11 @@ function Speaking() {
                       </ul>
                       <h3 className="mb-15 fs-20">
                         <a href="blog-details.html">
-                          Business modeless and pricing strategies are
-                          essential.
+                        Talking about other people
                         </a>
                       </h3>
                       <p>
-                        This immersive course is crafted to provide participants
+                      In this video, Noelia and Yuna talk about someone they know. Listen to the language they use for talking about other people and practise saying the useful phrases.
                       </p>
                     </div>
                   </div>
@@ -721,9 +717,9 @@ function Speaking() {
                   <div className="single-blog-box">
                     <div className="image position-relative">
                       <a href="blog-details.html">
-                        <img src="assets/img/all-img/blog-5.png" alt="image" />
+                        <img src="assets/img/all-img/wareYouAre.jpg" alt="image" />
                       </a>
-                      <div className="cr-tag">
+                      {/* <div className="cr-tag">
                         <a href="author.html">Design</a>
                       </div>
                       <div className="author">
@@ -734,7 +730,7 @@ function Speaking() {
                           />
                           <span>Eleanor Pena</span>
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="content">
                       <ul className="cr-items d-flex list-unstyle">
@@ -751,12 +747,11 @@ function Speaking() {
                       </ul>
                       <h3 className="mb-15 fs-20">
                         <a href="blog-details.html">
-                          Business modeless and pricing strategies are
-                          essential.
+                        Talking about where you're from
                         </a>
                       </h3>
                       <p>
-                        This immersive course is crafted to provide participants
+                      In this video, Emir and Vanya learn more about each other. Listen to the language they use for talking about where they're from and practise saying the useful phrases.
                       </p>
                     </div>
                   </div>
@@ -765,9 +760,9 @@ function Speaking() {
                   <div className="single-blog-box">
                     <div className="image position-relative">
                       <a href="blog-details.html">
-                        <img src="assets/img/all-img/blog-6.png" alt="image" />
+                        <img src="assets/img/all-img/aplogies.jpg" alt="image" />
                       </a>
-                      <div className="cr-tag">
+                      {/* <div className="cr-tag">
                         <a href="author.html">Design</a>
                       </div>
                       <div className="author">
@@ -778,7 +773,7 @@ function Speaking() {
                           />
                           <span>Eleanor Pena</span>
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="content">
                       <ul className="cr-items d-flex list-unstyle">
@@ -795,12 +790,11 @@ function Speaking() {
                       </ul>
                       <h3 className="mb-15 fs-20">
                         <a href="blog-details.html">
-                          Business modeless and pricing strategies are
-                          essential.
+                        Apologising
                         </a>
                       </h3>
                       <p>
-                        This immersive course is crafted to provide participants
+                      In this video, Paul says sorry for making Noelia fall over. Listen to the language they use for apologising and practise saying the useful phrases.
                       </p>
                     </div>
                   </div>
